@@ -1,0 +1,4 @@
+{"timestamp": "2025-05-24T08:36:29.656951-04:00", "event": "killswitch_triggered", "level": "account", "reason": "Manual kill", "reason_code": "MANUAL_ADMIN_TRIGGER", "user_id": "risker", "trigger_source": "admin_panel"}
+{"timestamp": "2025-05-24T08:42:38.446005-04:00", "event": "killswitch_released", "level": "account", "symbol": null, "user_id": "risker", "release_type": "manual", "released_by": "risker", "reason_code": "MANUAL_RELEASE"}
+{"timestamp": "2025-05-24T08:49:24.900004-04:00", "event": "killswitch_triggered", "level": "account", "reason": "Manual kill", "reason_code": "MANUAL_ADMIN_TRIGGER", "user_id": "risker", "trigger_source": "admin_panel"}
+{"timestamp": "2025-05-24T08:49:27.266125-04:00", "event": "killswitch_released", "level": "account", "symbol": null, "user_id": "risker", "release_type": "manual", "released_by": "risker", "reason_code": "MANUAL_RELEASE"}

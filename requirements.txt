@@ -1,0 +1,13 @@
+streamlit>=1.32
+pandas
+numpy
+pyyaml
+pytz
+plotly
+arch
+alpaca-trade-api
+alpha_vantage
+python-dotenv
+fpdf
+scikit-learn
+hmmlearn

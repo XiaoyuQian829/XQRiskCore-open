@@ -1,0 +1,69 @@
+# config/symbol_category.yaml
+
+# === ETFs ===
+SPY: ETFs        # S&P 500 ETF
+QQQ: ETFs        # NASDAQ-100 ETF
+VTI: ETFs        # Total US Stock Market ETF
+XLK: ETFs        # Technology Sector ETF
+XLF: ETFs        # Financial Sector ETF
+XLE: ETFs        # Energy Sector ETF
+XLV: ETFs        # Health Care Sector ETF
+VNQ: ETFs        # Real Estate ETF
+ARKK: ETFs       # Innovation ETF (Cathie Wood)
+DIA: ETFs        # Dow Jones Industrial Average ETF
+IWM: ETFs        # Russell 2000 ETF
+EFA: ETFs        # Developed Markets (ex-US)
+EEM: ETFs        # Emerging Markets ETF
+
+# === Bonds ===
+BND: Bonds       # Total Bond Market ETF
+TLT: Bonds       # Long-Term Treasury Bonds
+IEF: Bonds       # 7-10 Year Treasury ETF
+SHY: Bonds       # 1-3 Year Treasury ETF
+LQD: Bonds       # Investment Grade Corporate Bonds
+HYG: Bonds       # High-Yield Corporate Bonds
+TIP: Bonds       # Treasury Inflation-Protected Securities
+
+# === Stocks ===
+AAPL: Stocks     # Apple
+MSFT: Stocks     # Microsoft
+GOOGL: Stocks    # Alphabet (Google)
+GOOG: Stocks     # Alphabet (Google)
+AMZN: Stocks     # Amazon
+META: Stocks     # Meta Platforms
+TSLA: Stocks     # Tesla
+NVDA: Stocks     # Nvidia
+JPM: Stocks      # JPMorgan Chase
+BAC: Stocks      # Bank of America
+WFC: Stocks      # Wells Fargo
+V: Stocks        # Visa
+MA: Stocks       # Mastercard
+PYPL: Stocks     # PayPal
+UNH: Stocks      # UnitedHealth Group
+JNJ: Stocks      # Johnson & Johnson
+PFE: Stocks      # Pfizer
+MRK: Stocks      # Merck
+XOM: Stocks      # Exxon Mobil
+CVX: Stocks      # Chevron
+COP: Stocks      # ConocoPhillips
+HD: Stocks       # Home Depot
+LOW: Stocks      # Lowe's
+KO: Stocks       # Coca-Cola
+PEP: Stocks      # PepsiCo
+PG: Stocks       # Procter & Gamble
+WMT: Stocks      # Walmart
+COST: Stocks     # Costco
+TGT: Stocks      # Target
+NKE: Stocks      # Nike
+DIS: Stocks      # Walt Disney
+ORCL: Stocks     # Oracle
+IBM: Stocks      # IBM
+CRM: Stocks      # Salesforce
+INTC: Stocks     # Intel
+AMD: Stocks      # Advanced Micro Devices
+BA: Stocks       # Boeing
+GE: Stocks       # General Electric
+CAT: Stocks      # Caterpillar
+DE: Stocks       # Deere & Co.
+ABBV: Stocks     # AbbVie
+TMO: Stocks      # Thermo Fisher Scientific

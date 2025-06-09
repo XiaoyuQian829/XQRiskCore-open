@@ -1,0 +1,4 @@
+{"timestamp": "2025-06-03T00:19:51.336926-04:00", "event": "killswitch_triggered", "level": "account", "reason": "Manual kill", "reason_code": "MANUAL_ADMIN_TRIGGER", "user_id": "admin", "trigger_source": "admin_panel"}
+{"timestamp": "2025-06-03T00:26:33.092110-04:00", "event": "killswitch_released", "level": "account", "symbol": null, "user_id": "admin", "release_type": "manual", "released_by": "admin", "reason_code": "MANUAL_RELEASE"}
+{"timestamp": "2025-06-03T00:33:31.816032-04:00", "event": "killswitch_triggered", "level": "asset", "reason": "Manual kill", "reason_code": "MANUAL_ADMIN_TRIGGER", "user_id": "admin", "trigger_source": "admin_panel"}
+{"timestamp": "2025-06-03T00:34:43.272998-04:00", "event": "killswitch_released", "level": "asset", "symbol": "AMD", "user_id": "admin", "release_type": "manual", "released_by": "admin", "reason_code": "MANUAL_RELEASE"}

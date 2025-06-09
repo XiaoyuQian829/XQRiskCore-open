@@ -1,0 +1,3 @@
+{"timestamp": "2025-05-19 15:28:02", "user": "admin", "role": "admin", "client": "__ALL__", "source": "unknown", "module": "admin", "action": "create_client", "status": "ok", "payload": {"client_id": "XiaoyuQ"}, "module_version": "v1.0.0"}
+{"timestamp": "2025-05-19 15:29:02", "user": "admin", "role": "admin", "client": "__ALL__", "source": "unknown", "module": "admin", "action": "create_client", "status": "ok", "payload": {"client_id": "AllanM"}, "module_version": "v1.0.0"}
+{"timestamp": "2025-05-19 15:29:55", "user": "admin", "role": "admin", "client": "__ALL__", "source": "unknown", "module": "admin", "action": "create_client", "status": "ok", "payload": {"client_id": "RuolanZ"}, "module_version": "v1.0.0"}

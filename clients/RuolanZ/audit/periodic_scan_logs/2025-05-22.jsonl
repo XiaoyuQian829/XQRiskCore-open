@@ -1,0 +1,11 @@
+{"net_value": 99691.78, "drawdown": -0.003429, "silent_mode_days_left": 0, "triggered_assets": [], "timestamp": "2025-05-22T22:20:14.189015-04:00", "scan_type": "10min_intraday_scan"}
+{"net_value": 99691.78, "drawdown": -0.003429, "silent_mode_days_left": 0, "triggered_assets": [], "timestamp": "2025-05-22T22:30:53.216925-04:00", "scan_type": "unspecified_interval_scan"}
+{"net_value": 99691.78, "drawdown": -0.003429, "silent_mode_days_left": 0, "triggered_assets": [], "timestamp": "2025-05-22T22:31:20.026830-04:00", "scan_type": "unspecified_interval_scan"}
+{"net_value": 99691.78, "drawdown": -0.003429, "silent_mode_days_left": 0, "triggered_assets": [], "timestamp": "2025-05-22T22:31:54.848259-04:00", "scan_type": "unspecified_interval_scan"}
+{"net_value": 99691.78, "drawdown": -0.003429, "silent_mode_days_left": 0, "triggered_assets": [], "timestamp": "2025-05-22T22:35:19.714327-04:00", "scan_type": "10min_intraday_scan"}
+{"net_value": 99691.78, "drawdown": -0.003429, "silent_mode_days_left": 0, "triggered_assets": [], "timestamp": "2025-05-22T22:40:01.833517-04:00", "scan_type": "20min_intraday_scan"}
+{"net_value": 99691.78, "drawdown": -0.003429, "silent_mode_days_left": 0, "triggered_assets": [], "timestamp": "2025-05-22T22:45:41.084385-04:00", "scan_type": "15min_intraday_scan"}
+{"net_value": 99691.78, "drawdown": -0.003429, "silent_mode_days_left": 0, "triggered_assets": [], "timestamp": "2025-05-22T23:00:47.230221-04:00", "scan_type": "15min_intraday_scan"}
+{"net_value": 99691.78, "drawdown": -0.003429, "silent_mode_days_left": 0, "triggered_assets": [], "timestamp": "2025-05-22T23:15:55.525527-04:00", "scan_type": "15min_intraday_scan"}
+{"net_value": 99691.78, "drawdown": -0.003429, "silent_mode_days_left": 0, "triggered_assets": [], "timestamp": "2025-05-22T23:31:02.388903-04:00", "scan_type": "15min_intraday_scan"}
+{"net_value": 99691.78, "drawdown": -0.003429, "silent_mode_days_left": 0, "triggered_assets": [], "timestamp": "2025-05-22T23:46:10.157174-04:00", "scan_type": "15min_intraday_scan"}

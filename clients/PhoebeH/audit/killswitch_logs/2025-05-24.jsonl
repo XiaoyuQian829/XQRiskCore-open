@@ -1,0 +1,4 @@
+{"timestamp": "2025-05-24T08:35:45.597971-04:00", "event": "killswitch_triggered", "level": "asset", "reason": "Manual kill", "reason_code": "MANUAL_ADMIN_TRIGGER", "user_id": "risker", "trigger_source": "admin_panel"}
+{"timestamp": "2025-05-24T08:35:47.915113-04:00", "event": "killswitch_released", "level": "asset", "symbol": "AAPL", "user_id": "risker", "release_type": "manual", "released_by": "risker", "reason_code": "MANUAL_RELEASE"}
+{"timestamp": "2025-05-24T08:36:02.094527-04:00", "event": "killswitch_triggered", "level": "account", "reason": "Manual kill", "reason_code": "MANUAL_ADMIN_TRIGGER", "user_id": "risker", "trigger_source": "admin_panel"}
+{"timestamp": "2025-05-24T08:36:04.365599-04:00", "event": "killswitch_released", "level": "account", "symbol": null, "user_id": "risker", "release_type": "manual", "released_by": "risker", "reason_code": "MANUAL_RELEASE"}

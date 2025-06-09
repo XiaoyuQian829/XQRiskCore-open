@@ -1,0 +1,196 @@
+/* === 全局基础样式 === */
+html, body, .stApp {
+    font-size: 16px;
+    font-family: 'Segoe UI', 'Inter', sans-serif;
+    color: #f0f0f0;
+    background-color: #0f1117;
+}
+
+/* === 登录区卡片结构 === */
+.login-box {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    margin-top: 2.5rem;
+}
+.login-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+}
+.login-logo img {
+    width: 360px;
+    border-radius: 8px;
+}
+.login-form-box {
+    font-size: 1rem;
+}
+.login-form-box > label,
+.login-form-box label {
+    font-size: 1rem;
+    margin-top: 0 !important;
+    margin-bottom: 0.4rem;
+    display: block;
+}
+.login-form-box .stSelectbox,
+.login-form-box .stTextInput,
+.login-form-box .stCheckbox {
+    font-size: 1rem;
+}
+
+/* === 登录区头像（login-only） === */
+.avatar-login {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+.avatar-login img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff22;
+}
+.avatar-login span {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* === 顶栏 Header 结构 === */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+.header-title h2 {
+    margin-bottom: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* === 控制台右上角用户信息块 === */
+.user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.25rem;
+    text-align: right;
+}
+
+/* === 顶栏头像 + 用户名 + 角色（Header 专用） === */
+.topbar-avatar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0; /* ✅ 清除 margin-bottom */
+}
+.topbar-avatar img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #ffffff33;
+    object-fit: cover;
+}
+.avatar-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 1.3;
+}
+.avatar-text .username {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+
+/* === 角色徽章 badge === */
+.role-badge {
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+.role-admin {
+    background-color: #e6f4ea;
+    color: #237804;
+}
+.role-trader {
+    background-color: #e6f1ff;
+    color: #0050b3;
+}
+.role-analyst {
+    background-color: #fff4e6;
+    color: #ad4e00;
+}
+
+/* === Logout 按钮样式 === */
+.logout-btn {
+    background-color: #0A84FF;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 0.3rem;
+    transition: background 0.2s ease-in-out;
+}
+.logout-btn:hover {
+    background-color: #006be8;
+}
+.stButton > button {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+}
+
+/* === 错误提示框 === */
+.error-block {
+    background-color: rgba(255, 68, 68, 0.1);
+    color: #FF4444;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    text-align: center;
+}
+/* === Streamlit 强制表单字体提升 === */
+.stTextInput label,
+.stTextArea label,
+.stSelectbox label,
+.stNumberInput label,
+.stCheckbox label {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+}
+
+.stTextInput input,
+.stNumberInput input,
+.stTextArea textarea {
+    font-size: 1rem !important;
+}
+
+.stCheckbox > div {
+    font-size: 1rem !important;
+}
+
+.stSelectbox > div[data-baseweb] {
+    font-size: 1rem !important;
+}
+
+.element-container .stDataFrame div[data-testid="stMarkdownContainer"] {
+    font-size: 2rem !important;
+}
+.element-container .stDataFrame td {
+    font-size: 2rem !important;
+}
+.stDataFrame table {
+    font-size: 2rem !important;
+}
+

@@ -1,0 +1,80 @@
+XiaoyuQ:
+  name: Xiaoyu Qian
+  api_provider: alpha_vantage
+  api_key: ''
+  dry_run: true
+  base_capital: 100000
+  broker: alpaca
+  broker_keys:
+    key: ''
+    secret: ''
+  enable_intraday_trigger: true
+  intraday_trigger_interval_minutes: 5
+  created_at: '2025-05-19 01:27:08'
+  risk_style: aggressive
+  assets: []
+AllanM:
+  name: Allan McRae
+  api_provider: alpha_vantage
+  api_key: ''
+  dry_run: true
+  base_capital: 100000
+  broker: alpaca
+  broker_keys:
+    key: ''
+    secret: ''
+  enable_intraday_trigger: true
+  intraday_trigger_interval_minutes: 5
+  created_at: '2025-05-19 01:27:08'
+RuolanZ:
+  name: Ruolan Zhao
+  api_provider: polygon
+  api_key: ''
+  dry_run: true
+  base_capital: 100000
+  broker: alpaca
+  broker_keys:
+    key: ''
+    secret: ''
+  enable_intraday_trigger: true
+  intraday_trigger_interval_minutes: 5
+  created_at: '2025-05-19 01:27:08'
+JerryY:
+  name: Jerry Yang
+  api_provider: alpha_vantage
+  api_key: ''
+  dry_run: true
+  base_capital: 1000000
+  broker: alpaca
+  broker_keys:
+    key: ''
+    secret: ''
+  enable_intraday_trigger: true
+  intraday_trigger_interval_minutes: 5
+  created_at: '2025-05-20 01:43:53'
+JackJ:
+  name: Jack Jones
+  api_provider: alpha_vantage
+  api_key: ''
+  dry_run: true
+  base_capital: 1000000
+  broker: alpaca
+  broker_keys:
+    key: ''
+    secret: ''
+  enable_intraday_trigger: true
+  intraday_trigger_interval_minutes: 5
+  created_at: '2025-05-22 01:34:24'
+PhoebeH:
+  name: Phoebe
+  api_provider: alpha_vantage
+  api_key: ''
+  dry_run: true
+  base_capital: 100000
+  broker: alpaca
+  broker_keys:
+    key: ''
+    secret: ''
+  enable_intraday_trigger: true
+  intraday_trigger_interval_minutes: 5
+  created_at: '2025-05-22 22:31:01'
