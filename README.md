@@ -399,23 +399,28 @@ Covers:
 
 ## 🧩 System Architecture
 
-The system follows a four-layer design:
+XQRiskCore follows a four-layer architecture:
 
-| Layer Name                   | Role Description                                                                 | Key Modules & Files                                                                                  |
-|-----------------------------|-----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| **1. Data & Signal Layer**  | Market data ingestion, portfolio metrics, risk signal generation                 | `market_data/`, `utils/`, `risk_engine/signals/`, `clients/*/snapshots/portfolio_state.json`         |
-| **2. Risk Engine & Approval Layer** | Risk scoring, rule enforcement, trade blocking via KillSwitch/Silent Mode        | `risk_engine/`, `risk_engine/signals/`, `clients/*/config/asset_config.yaml`                         |
-| **3. Strategy Module Layer**| Trade idea generation via strategies or manual input                             | `strategy/`, `frontend/roles/trader/pages/trade_form.py`, `scheduler/rebalance_scheduler.py`         |
-| **4. Execution & Audit Layer** | Trade execution, audit logging, lifecycle traceability                           | `services/trade_flow.py`, `core/execution/`, `audit/`, `clients/*/audit/`, `frontend/roles/auditor/` |
+| Layer | Function                                      | Modules & Files                                                                 |
+|-------|-----------------------------------------------|----------------------------------------------------------------------------------|
+| 1️⃣ Data & Signal       | Market data ingestion, risk signal gen           | `market_data/`, `utils/`, `risk_engine/signals/`, `portfolio_state.json`        |
+| 2️⃣ Risk & Approval     | Risk scoring, rule checks, trade blocking        | `risk_engine/`, `asset_config.yaml`                                              |
+| 3️⃣ Strategy Module     | Strategy execution, trade intent creation        | `strategy/`, `rebalance_scheduler.py`, `trade_form.py`                           |
+| 4️⃣ Execution & Audit   | Trade execution, audit logging, lifecycle trace  | `trade_flow.py`, `core/execution/`, `audit/`, `roles/auditor/`                  |
 
+---
 
-Three context containers coordinate logic:
+### 🧠 Core Context Containers
 
-| Context Object   | Scope of Responsibility                     | Primary Role                                                                  | Where It's Instantiated                         | Represents                          |
-|------------------|----------------------------------------------|-------------------------------------------------------------------------------|--------------------------------------------------|-------------------------------------|
-| `ClientContext`  | Portfolio state, risk settings, intraday metrics | Encapsulates account-level risk exposure, holdings, drawdowns, constraints    | During every trade intent submission            | **Account’s Real-Time Risk Profile** |
-| `ExecutionContext` | Full trade lifecycle (intent → audit)       | Tracks trade from intent, approval, execution, post-trade update to audit log | Central to the `trade_flow.py` pipeline         | **Trade Trace & Audit Container**   |
-| `RequestContext` | User identity, permissions, UI session state | Governs user access, page visibility, and logs interactions                   | On login; stored in Streamlit `session_state`   | **UI Session & Access Authority**   |
+| Context         | Scope                      | Role                                  | Created When                  | Represents                        |
+|-----------------|----------------------------|----------------------------------------|--------------------------------|------------------------------------|
+| `ClientContext` | Risk state & metrics       | Tracks portfolio, drawdown, triggers   | On trade intent submit         | 📊 Account risk snapshot           |
+| `ExecutionContext` | Full trade lifecycle     | Tracks approval, execution, audit log  | Inside `trade_flow.py`         | 🔁 Trade-level audit container     |
+| `RequestContext` | User + permissions         | Governs access, logs interactions      | On user login (`session_state`) | 🔐 UI access & role scope          |
+
+---
+
+### 🔄 Trade Flow Overview|
 
 
                  ┌────────────────────────────┐
