@@ -596,8 +596,7 @@ and it proved invaluable — not just in ideation and modeling, but in actual de
 Their collective input helped me cross-validate risk ideas from different perspectives.
 
 I also want to sincerely thank my PhD advisors, **Associate Professor Allan McRae** and **Dr. Fleur Garton**.  
-Although their research lies in a completely different domain — multi-omics and disease modeling —  
-the conceptual rigor and modeling frameworks I learned under their guidance  
+The conceptual rigor and modeling frameworks I learned under their guidance  
 inspired many of the abstractions I applied here, from layered architecture to signal integration.
 
 Though we never met, I also want to pay tribute to the late **Charlie Munger**,  
