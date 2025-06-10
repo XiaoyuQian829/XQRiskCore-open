@@ -89,7 +89,7 @@ Every source — whether it’s a button click, a strategy trigger, or a schedul
 → Intent → Risk Signal → Approval → Execution → Audit → Post-Trade Monitoring
 
 #### 📊 Figure 1: XQRiskCore Risk-Controlled Trade Lifecycle
-![Trade Flow](assets/tradeflow.png)
+![Trade Flow](assets/xq_tradeflow.png)
 
 🧩 Want to understand how this unified trade pipeline actually works under the hood?
 
