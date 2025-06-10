@@ -39,7 +39,7 @@ do not result in ghost trades or untraceable outcomes.
 
 With the Emergency Guard Layer active, every trade follows a stricter, more auditable pipeline:
 
-![deepseek_mermaid_20250604_b3e5cf](https://github.com/user-attachments/assets/e8d71d80-c068-4466-8255-265134ce0913)
+![deepseek_mermaid_20250604_b3e5cf](assets/04/guard_layer.png)
 
 ---
 
