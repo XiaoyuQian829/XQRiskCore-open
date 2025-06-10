@@ -162,11 +162,12 @@ before it is executed. This is the core of XQRiskCore’s institutional-grade ri
 
 Try it:
 - 👉 [**Login as `trader1` (Role: Trader)**](https://xqriskcore-production.up.railway.app)  
-  → Go to **`Trader: Manual Trade Submit`**  
+  → Go to **`Trader: Manual Trade Submit`**
+![Audit Screenshot](assets/xq_submit_trade.png)  
   → Select a client and submit a trade form to trigger the full risk approval flow.
 - 👉 [**Login as `quant_researcher` (Role: Quant Researcher)**](https://xqriskcore-production.up.railway.app)  
   → Activate a strategy and observe how it routes through the same unified trade lifecycle.
-![Audit Screenshot](assets/xq_submit_trade.png)
+
 
 - 👉 [**Login as `auditor` (Role: Auditor)**](https://xqriskcore-production.up.railway.app)  
   → Go to **`Audit: Decision Records`**  
