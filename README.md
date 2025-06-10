@@ -618,6 +618,8 @@ I built XQRiskCore with help from large language models — not just as tools, b
 
 I’m deeply grateful to my PhD advisors, **Allan McRae** and **Fleur Garton**, whose modeling discipline shaped much of the system’s architecture.
 
+Special thanks to **Dr. JayBee Huang**, whose open sharing on social media — learning quant from scratch with AI — inspired the very spirit of this project.
+
 Two ideas guided this project from the ground up:
 
 - **Charlie Munger’s latticework thinking**, which taught me to cross-pollinate abstractions from genetics to finance.  
