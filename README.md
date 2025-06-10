@@ -4,6 +4,17 @@
 
 ---
 
+🎯 **Live Demo Available**  
+Try it here → [xqriskcore-production.up.railway.app](https://xqriskcore-production.up.railway.app)
+
+<p align="center">
+  <img src="assets/xq_login.png" width="400" />
+</p>
+
+*Deployed on Railway. Optimized for responsiveness, audit visibility, and governance transparency.*
+
+---
+
 ## ⚙️ Built to Govern, Not Just Execute
 
 **XQRiskCore** enforces policy before trades happen — not after they go wrong.
