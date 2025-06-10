@@ -21,7 +21,7 @@ All trade actions in XQRiskCore are encapsulated as a `TradeIntent` object.
 ### 📊 Figure: XQRiskCore Full Trade Lifecycle
 This diagram shows the lifecycle of every trade inside XQRiskCore.  
 From `TradeIntent` submission (left) to final audit and post-trade update (right), every action is structured, reviewed, and logged.
-![Trade Flow](https://github.com/user-attachments/assets/ad9b33ee-ba72-4be4-a2ad-2a4c26bf5073)
+![Trade Flow](assets/xq_tradeflow.png)
  
 ---
 
@@ -31,7 +31,7 @@ From `TradeIntent` submission (left) to final audit and post-trade update (right
 
 #### 🔹 Intent Metadata
 
-<img width="843" alt="Screenshot 2025-06-07 at 9 45 47 PM" src="https://github.com/user-attachments/assets/e27968a7-c90c-4e26-8500-a2b20ca15aae" />
+<img width="843" alt="Screenshot 2025-06-07 at 9 45 47 PM" src="assets/01/approve_intent.png" />
 
 #### 🧾 TradeIntent Field Reference (Manual-Triggered)
 
@@ -52,7 +52,7 @@ From `TradeIntent` submission (left) to final audit and post-trade update (right
 ### Example 2: Strategy Trade
 
 #### 🔹 Intent Metadata
-<img width="838" alt="Screenshot 2025-06-07 at 9 45 17 PM" src="https://github.com/user-attachments/assets/7995441f-2fa5-4a5e-8bf1-c0ee3aac8d45" />
+<img width="838" alt="Screenshot 2025-06-07 at 9 45 17 PM" src="asset/01/reject_intent.png" />
 
 #### 🧾 TradeIntent Field Reference (Strategy-Triggered)
 
@@ -108,7 +108,7 @@ This ensures **full traceability** even for failed or rejected attempts.
 
 ### 🧾 Example: Pre-Blocked Manual Trade (Kill Switch)
 
-<img width="942" alt="Screenshot 2025-06-08 at 1 30 22 PM" src="https://github.com/user-attachments/assets/1023c855-f5ef-4185-8d29-e549c38eb38b" />
+<img width="942" alt="Screenshot 2025-06-08 at 1 30 22 PM" src="assets/01/pre_block.png" />
 
 ```json
 {
