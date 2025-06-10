@@ -83,8 +83,6 @@ Listen to the official theme track — composed by AI, inspired by structure:
 Let the music carry the logic.  
 **Structured. Watchful. Unyielding.**
 
-
-
 ---
 
 ## 📚 Institutional Inspirations
