@@ -43,7 +43,7 @@ Its design foundations are:
 What sets XQRiskCore apart is clarity: every decision is traceable, every rule is testable, and every action is governed by policy.  
 You don’t have to take my word for it — the live system is available for full transparency and inspection.
 
-> 🎯 [Click here to explore the live risk control interface](https://xqriskcore-production.up.railway.app)
+> 🎯 [Click here to access XQRiskCore](https://xqriskcore-production.up.railway.app)
 
 <p align="center">
   <img src="assets/xq_login.png" width="699" />
