@@ -130,12 +130,16 @@ Included:
 
 ### 2. 🧠 Dual-Path Risk Control Architecture
 
-XQRiskCore enforces risk across two complementary paths:
+XQRiskCore enforces risk through two layers:
+
+- **Pre-Trade Approval** — blocks high-risk trades before execution  
+- **Post-Trade Monitoring** — detects exposures and auto-locks after execution
+
+---
 
 #### 1️⃣ Pre-Trade Approval
 
-Every trade — whether triggered manually, algorithmically, or via rebalancing — must pass a unified approval gate  
-before it is executed. This is the core of XQRiskCore’s institutional-grade risk governance.
+Every trade — manual, strategy, or rebalance — passes a unified approval flow before execution. This is the core of XQRiskCore’s institutional-grade risk governance.
 
 ##### 🔁 Approval Flow Diagram
 
@@ -200,110 +204,120 @@ Try it:
 
 #### 🧯 2️⃣ Post-Trade Monitoring — Risk Trigger System
 
-After a trade is approved and executed, XQRiskCore continuously monitors live positions using two layered engines:
+After execution, XQRiskCore continuously monitors positions using:
 
-- ⚡ **IntradayTriggerEngine** — Real-time monitoring during market hours  
-- 🌙 **SilentTriggerEngine** — End-of-day (EOD) review to enforce lockouts or cooldowns
+- ⚡ `IntradayTriggerEngine` — real-time risk detection  
+- 🌙 `SilentTriggerEngine` — end-of-day lockout review
 
-If any predefined **account-level** or **asset-level** thresholds are breached, the system will trigger **Silent Mode** (cooldown) or a full **Kill Switch** (lockdown) — ensuring risk is reined in before it spirals.
+If any account- or asset-level threshold is breached, the system activates:
 
-##### 🧮 Account-Level Risk Triggers
+- **Silent Mode** — temporary cooldown  
+- **Kill Switch** — full lockout  
 
-| 🔍 Condition                         | 🧾 Metric Used                  | ⚠️ Action              | 🛠️ Module               |
-|-------------------------------------|---------------------------------|-------------------------|--------------------------|
-| Intraday drawdown ≤ **-5%**         | `drawdown` vs. `peak_value`     | Silent Mode (2 days)    | IntradayTriggerEngine    |
-| Daily return ≤ **-5%**              | `daily_return`                  | Silent Mode (2 days)    | SilentTriggerEngine      |
-| Monthly return ≤ **-10%**           | `monthly_return`                | Silent Mode (until EOM) | SilentTriggerEngine      |
-| Consecutive losing days ≥ **3**     | `consecutive_losses`            | Silent Mode (1 day)     | SilentTriggerEngine      |
+---
 
-> 💡 These rules act as **portfolio-level brakes**, especially when trader behavior, exposure concentration, or market turmoil cause repeated or compounding losses.
+##### 🧮 Account-Level Triggers
 
-##### 📦 Asset-Level Risk Triggers
+| Condition                          | Metric           | Action             | Module                 |
+|-----------------------------------|------------------|---------------------|-------------------------|
+| Intraday drawdown ≤ -5%           | `drawdown`       | Silent Mode (2d)    | Intraday               |
+| Daily return ≤ -5%                | `daily_return`   | Silent Mode (2d)    | Silent                 |
+| Monthly return ≤ -10%             | `monthly_return` | Silent Mode (EOM)   | Silent                 |
+| ≥ 3 consecutive losing days       | `consecutive_losses` | Silent Mode (1d) | Silent                 |
 
-| 🔍 Condition                               | 🧾 Metric Used                | 📉 Threshold   | 🧊 Lock Duration | 🛠️ Trigger Module(s)                         |
-|-------------------------------------------|-------------------------------|----------------|------------------|------------------------------------------------|
-| Position drawdown ≤ **-7%**               | `pos_drawdown`                | -7%            | 3 days           | IntradayTriggerEngine                          |
-| 3-day cumulative drawdown ≤ **-10%**      | `drawdown_3d`                 | -10%           | 7 days           | SilentTriggerEngine                            |
-| Live drawdown ≤ **-15%**                  | `drawdown_pct`                | -15%           | 7 days           | SilentTriggerEngine                            |
-| Consecutive down days ≥ **3**             | `consecutive_down_days`       | 3              | 7 days           | Intraday + SilentTriggerEngine                 |
-| Single-day move ≥ **±8%**                 | `(cur - prev) / prev`         | 8%             | 7 days           | Intraday + SilentTriggerEngine                 |
-| Most recent slippage ≥ **0.5%**           | `last_slippage_pct`           | 0.5%           | 7 days           | Intraday + SilentTriggerEngine                 |
+> 💡 These act as portfolio-level brakes when losses accumulate or behavior destabilizes.
 
-> 📌 These asset-specific rules prevent **repeat exposure to stressed instruments**, and build in slippage-sensitive protection.
+---
+
+##### 📦 Asset-Level Triggers
+
+| Condition                        | Metric                 | Threshold | Lock    | Module(s)              |
+|----------------------------------|-------------------------|-----------|---------|-------------------------|
+| Position drawdown ≤ -7%         | `pos_drawdown`          | -7%       | 3 days  | Intraday               |
+| 3-day drawdown ≤ -10%           | `drawdown_3d`           | -10%      | 7 days  | Silent                 |
+| Live drawdown ≤ -15%            | `drawdown_pct`          | -15%      | 7 days  | Silent                 |
+| ≥ 3 down days                   | `consecutive_down_days` | 3         | 7 days  | Intraday + Silent      |
+| One-day move ≥ ±8%              | `(cur - prev) / prev`   | ±8%       | 7 days  | Intraday + Silent      |
+| Slippage ≥ 0.5%                 | `last_slippage_pct`     | 0.5%      | 7 days  | Intraday + Silent      |
+
+> 📌 Asset-level blocks prevent repeat exposure to stressed instruments and slippage-heavy trades.
 
 📄 [See `02_intray&&daily_trigger.md`](02_intray&&daily_trigger.md)  
-Includes:
+Covers:
 
-- 🛰️ How `IntradayTriggerEngine` detects and blocks live risks during market hours  
-- 🌙 How `SilentTriggerEngine` enforces cooldowns and slippage rules after market close  
-- 🚦 Dual-stage enforcement design for round-the-clock protection  
-- ⚡ Thresholds for drawdown, volatility, slippage, and behavioral anomalies  
-- 🔁 Integration with audit logs, manual override, and per-client scan frequency  
+- 🛰️ Real-time vs EOD trigger engine design  
+- ⚡ Key thresholds: drawdown, volatility, slippage  
+- 🔁 Audit integration and override traceability  
+- 🔍 Per-client monitoring logic
 
-##### 🧠 Future Enhancements (Planned)
+---
 
-- **Black Swan Handling**: e.g., S&P500 drops > 5% in one day → system-wide KillSwitch  
-- **Slow Burn Alerting**: 5 small losing days without major drops → cumulative risk lockdown  
+##### 🧠 Future Enhancements
 
-#### 🧬 Closed-Loop Monitoring Philosophy
+- **Black Swan KillSwitch** — e.g. S&P500 drops > 5% triggers lockdown  
+- **Slow Burn Lockdown** — 5 small losses without major drop triggers cooling phase
 
-> Approve only what deserves to go through.  
+---
+
+#### 🧬 Monitoring Philosophy
+
+> Approve what deserves to go through.  
 > Monitor everything that actually did.
 
-XQRiskCore’s post-trade system turns **reactive logging** into **proactive governance** —  
-ensuring that high-risk behavior is not just flagged, but automatically countered with structural circuit breakers.
+XQRiskCore turns logging into **automated containment** — high-risk behavior is not just observed, but structurally blocked.
+
 
 ---
 
 ### 3. 🧱 Role-Based Governance (RBAC)
 
-| Functional Domain                            | Assigned Role         | Status         |
-|---------------------------------------------|------------------------|----------------|
-| ✅ System Configuration & Access Control     | `admin`                | ✅ Implemented |
-| ✅ Manual Trade Execution                    | `trader`               | ✅ Implemented |
-| ✅ Risk Approval & Rule Enforcement          | `risker`               | ✅ Implemented |
-| ✅ Log Auditing & Behavioral Traceability    | `auditor`              | ✅ Implemented |
-| ✅ Strategy Research & Factor Optimization   | `quant_researcher`     | ✅ Implemented |
-| 🟡 Report Generation & Performance Analysis  | `reporter`             | 🔧 Coming Soon |
-| 🟡 Compliance & Manual Risk Intervention     | `compliance_officer`   | 🔧 Coming Soon |
-| 🟡 Strategy Signal Execution Agent           | `strategy_agent`       | 🔧 Coming Soon |
+Every role in XQRiskCore is **scoped by permission**, **linked to identity**, and **logged for accountability**.
 
-Each role is **permission-scoped**, **identity-linked**, and **behavior-tracked**, ensuring clean separation of duties and full accountability.
+| Functional Area                        | Role               | Status         |
+|----------------------------------------|--------------------|----------------|
+| Config & Access Control                | `admin`            | ✅ Implemented |
+| Manual Trade Execution                 | `trader`           | ✅ Implemented |
+| Risk Approval & Rule Enforcement       | `risker`           | ✅ Implemented |
+| Audit & Log Review                     | `auditor`          | ✅ Implemented |
+| Strategy Research                      | `quant_researcher` | ✅ Implemented |
+| Report Generation                      | `reporter`         | 🔧 Coming Soon |
+| Compliance Oversight                   | `compliance_officer` | 🔧 Coming Soon |
+| Strategy Signal Execution              | `strategy_agent`   | 🔧 Coming Soon |
 
-#### 🔐 Core Principles of Permission & Governance Design
+#### 🔐 Governance Design Principles
 
-- ✅ **Who can see what** — controls **information leakage risk**  
-- ✅ **Who can click which button** — acts as the **final defense** against unauthorized operations  
-- ✅ **Who ran a strategy or modified a threshold** — becomes the **accountability chain** when risks surface later  
-- ✅ **Permission logs + Action logs** — form the **foundation for compliance reporting** and regulatory clarity  
+- **What you see** = info scope  
+- **What you can do** = last line of control  
+- **What you trigger** = traceable decision path  
+- **What gets logged** = structured compliance proof
 
-This governance design ensures that every operation is **traceable, auditable, and justifiable**, reflecting institutional-level discipline in a modular, developer-owned system.
+All actions are **recorded and reviewable** — aligned with institutional-grade role separation and auditability.
 
-#### 🧑‍💼 Admin Console Highlights
+---
 
-- 👉 [**Login as `admin` (Role: Admin)**](https://xqriskcore-production.up.railway.app)  
-  → Go to **`Admin → User & Role Manager`**  
-  → Manage clients, assign roles, and activate/deactivate users in a secure, controlled interface.
+#### 🧑‍💼 Admin Console
 
-⬇️ **Client & User Management Interface**  
+- 👉 [Login as `admin`](https://xqriskcore-production.up.railway.app)  
+  → `Admin → User & Role Manager` → Manage clients, assign roles, activate users.
+
+⬇️ UI Preview  
 <img width="1304" alt="Client/User Management" src="assets/xq_user_manager.png" />
 
-- 👉 [**Still as `admin`**](https://xqriskcore-production.up.railway.app)  
-  → Go to **`Admin → Role Permission Matrix`**  
-  → Review and configure role-specific access rights with full visibility.
+- 👉 Still as `admin`  
+  → `Admin → Role Permission Matrix` → Configure per-role access.
 
-⬇️ **Permission Control Matrix View**  
+⬇️ Matrix Preview  
 <img width="1321" alt="Permission Matrix" src="assets/xq_role_permission.png" />
 
 📄 [See `03_rbac.md`](03_rbac.md)  
-Includes:
+Covers:
 
-- 🛡️ Core principles for Wall Street-grade access control: auditability, flexibility, and compliance  
-- 👤 How admins manage users and dynamically assign or revoke roles in real time  
-- 🧩 Support for per-client segmentation and granular permission scoping  
-- 🔄 Hot-swappable permission changes without system restarts  
-- 🧾 Immutable audit logging of all user actions and temporary privilege elevations  
-- 🔍 Real-time permission checks during every interface interaction
+- 🧩 Per-client segmentation  
+- 🔄 Hot-swappable permission changes  
+- 🧾 Immutable audit logging  
+- 🔍 Real-time permission checks  
+- 🛡️ Wall-Street-grade access control principles
+
 ---
 
 ### 4. 🧾 Structured Behavioral Logging
