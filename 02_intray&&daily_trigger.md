@@ -27,18 +27,18 @@ Real-time checks during market hours continuously evaluate:
 
 ⚡ If any configured threshold is triggered, the trade is **blocked instantly** and recorded for audit.
 
-![Intraday Logic](https://github.com/user-attachments/assets/539945ee-f3bc-469f-85d6-cc4f2a2fb3c7)
+![Intraday Logic](assets/02/intraday_flow.png)
 
 - 👉 [**Login as `admin1` (Role: Admin)**](https://xqriskcore-production.up.railway.app)  
   → Go to **`Admin: Intraday Trigger Rules`** to configure per-client scanning frequency — balancing performance and risk sensitivity.
 ⬇️ Example: Client-specific intraday risk settings  
-<img width="991" alt="Client-Specific Intraday Settings" src="https://github.com/user-attachments/assets/0dcab91c-3461-45aa-9e07-f2ba2e9b62db" />
+<img width="991" alt="Client-Specific Intraday Settings" src="assets/02/intraday_setting.png" />
 
 - 👉 [**Login as `risker` (Role: Risk Officer)**](https://xqriskcore-production.up.railway.app)  
   → Go to **`Risker: Trigger Scan History`**  
   → View timestamped intraday and end-of-day (EOD) trigger logs for full traceability.
 ⬇️ Example: Recorded scan activity and enforcement actions  
-![EOD Scan Log](https://github.com/user-attachments/assets/684e5887-ff74-4b99-a3c3-e8050a1befe5)
+![EOD Scan Log](assets/02/intraday_logs.png)
 
 ---
 
@@ -52,7 +52,7 @@ At market close, `SilentTriggerEngine` runs a full scan across:
 
 Accounts or assets breaching EOD policies are placed in **lockdown**, preventing further trades until reviewed or automatically released.
 
-![EOD Scan Diagram](https://github.com/user-attachments/assets/4599d588-dcb1-4f35-ab49-e6ee44b1e92a)
+![EOD Scan Diagram](assets/02/eod_flow.png)
 
 ---
 
@@ -66,11 +66,11 @@ In addition to automated enforcement, **XQRiskCore** provides manual safeguards 
 
 ⬇️ **Account-Level Manual Controls**  
 Freeze all trading for a specific account with a single click:  
-<img width="1304" alt="Account-Level Manual Controls" src="https://github.com/user-attachments/assets/06b6428f-96d9-4436-b6ef-5446cbad3dac" />
+<img width="1304" alt="Account-Level Manual Controls" src="assets/02/account_level.png" />
 
 ⬇️ **Asset-Level Manual Controls**  
 Individually toggle Silent Mode or Kill Switch for any asset:  
-<img width="1321" alt="Asset-Level Manual Controls" src="https://github.com/user-attachments/assets/c5c1c045-bc8d-40d1-815c-b2e087844bf8" />
+<img width="1321" alt="Asset-Level Manual Controls" src="assets/02/asset_level.png" />
 
 ---
 
