@@ -8,15 +8,15 @@
 
 **XQRiskCore** enforces policy before trades happen — not after they go wrong.
 
-It routes every trade through a structured lifecycle:
+Every trade is routed through a structured lifecycle:
 - ⛓️ From submission to approval  
 - 🧾 From scoring to audit logging  
-- 🛡️ From detection to multi-layered safeguards
+- 🛡️ From detection to multi-layer safeguards
 
-Whether triggered by a trader, a strategy, or a rebalancer —  
-**every action is accountable, every override is tracked, and every permission is scoped.**
+Whether triggered by a trader, a strategy, or a rebalance engine —  
+**every action is accountable, every override is recorded, and every permission is scoped.**
 
-> **This is not order routing. It's responsibility routing.**
+> **This is not order routing. It’s responsibility routing.**
 
 ---
 
