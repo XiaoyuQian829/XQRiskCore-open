@@ -4,7 +4,7 @@
 
 ---
 
-🎯 **Live Demo Available**  
+🎯 **Live Available**  
 Try it here → [xqriskcore-production.up.railway.app](https://xqriskcore-production.up.railway.app)
 
 <p align="center">
@@ -69,14 +69,6 @@ Its design foundations are:
 - To **monitor risk continuously**, not retroactively
 
 What sets XQRiskCore apart is clarity: every decision is traceable, every rule is testable, and every action is governed by policy.
-
-> 🎯 [Click here to access XQRiskCore](https://xqriskcore-production.up.railway.app)
-
-<p align="center">
-  <img src="assets/xq_login.png" width="699" />
-</p>
-
-*Deployed on Railway. Optimized for responsiveness, audit visibility, and governance transparency.*
 
 ---
 
