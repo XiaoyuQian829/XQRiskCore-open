@@ -46,7 +46,7 @@ You don’t have to take my word for it — the live system is available for ful
 > 🎯 [Click here to explore the live risk control interface](https://xqriskcore-production.up.railway.app)
 
 <p align="center">
-  <img width="699" alt="Screenshot of Risk Control Interface" src="https://github.com/user-attachments/assets/1f6948a8-a07e-4617-ad96-f7ba451e6e41" />
+  <img src="assets/xq_login.png" width="699" />
 </p>
 
 *Deployed on Railway. Optimized for responsiveness, audit visibility, and governance transparency.*
