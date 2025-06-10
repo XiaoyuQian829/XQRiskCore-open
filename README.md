@@ -616,7 +616,7 @@ If you're building something serious — or looking for someone who does — fee
 I built XQRiskCore with help from large language models — not just as tools, but as thinking partners.  
 **ChatGPT** helped architect logic, **DeepSeek** visualized workflows, and **Gemini** challenged the structure.
 
-I’m deeply grateful to my PhD advisors, **Allan McRae** and **Fleur Garton**, whose modeling discipline shaped much of the system’s architecture.
+I’m deeply grateful to my PhD advisors, **Associate Professor Allan McRae** and **Dr. Fleur Garton**, whose modeling discipline shaped much of the system’s architecture.
 
 Special thanks to **Dr. JayBee Huang**, whose open sharing on social media — learning quant from scratch with AI — inspired the very spirit of this project.
 
