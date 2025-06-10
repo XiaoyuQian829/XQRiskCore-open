@@ -434,7 +434,7 @@ XQRiskCore follows a four-layer architecture:
 
 ---
 
-### 🔄 Trade Flow Overview|
+### 🔄  Core Architecture Overview
 
 
                  ┌────────────────────────────┐
