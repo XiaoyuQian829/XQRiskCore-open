@@ -62,8 +62,6 @@ Whether triggered by a trader, a strategy, or a rebalance engine —
 
 **XQRiskCore wasn’t built to imitate trading tools — it was architected to enforce institutional-grade governance.**
 
-As a solo developer with a background in statistical modeling and financial risk, I built XQRiskCore from first principles — not as a strategy sandbox, but as a system of control.
-
 Its design foundations are:
 
 - To **embed compliance** directly into the trading process  
@@ -310,92 +308,92 @@ Includes:
 
 ### 4. 🧾 Structured Behavioral Logging
 
-XQRiskCore logs **every user and system action** using structured metadata — forming the foundation for accountability, compliance, and retrospective analysis.
+XQRiskCore logs **every user and system action** as structured metadata — enabling traceability, compliance, and post-trade forensics.
 
-#### 🧩 Action Types Tracked
+#### 🧩 Action Types
 
-| Type     | Description                                                | Example                                  |
-|----------|------------------------------------------------------------|------------------------------------------|
-| `view`   | Passive activity such as opening a dashboard or report     | Viewing a portfolio allocation snapshot  |
-| `action` | User-initiated events                                      | Submitting a trade or editing config     |
-| `system` | Automated or scheduled system behaviors                    | Daily risk scans or silent mode triggers |
-
+| Type     | Description                      | Example                                |
+|----------|----------------------------------|----------------------------------------|
+| `view`   | Passive interactions             | Opened a dashboard                     |
+| `action` | User-initiated operations        | Submitted a trade                      |
+| `system` | Automated system behavior        | Triggered Silent Mode                  |
 
 #### 🗂️ File Format & Storage
 
-Logs are written in newline-delimited JSON (`.jsonl`) and stored by user, role, and date for modular audit processing:
+Logs are saved in newline-delimited JSON (`.jsonl`), partitioned by role, user, and date:
 
 ```
 audit/user_action_logs/{role}/{user_id}/{YYYY-MM-DD}/events.jsonl
 ```
 
-Each file captures a full day of timestamped, structured event records.
 
-#### 🔍 Inspecting Logs as Admin
+Each file captures timestamped, structured records.
 
-- 👉 [**Login as `admin1` (Role: Admin)**](https://xqriskcore-production.up.railway.app)  
-  → Go to **`Admin → User Action Logs`**  
-  → Explore a structured, role-filtered log viewer that captures everything users **viewed**, **submitted**, **triggered**, or **overrode** — all immutably recorded for audit and accountability.
+#### 🔍 Admin Log Viewer
 
-⬇️ **User Action Log Viewer**  
+- 👉 [Login as `admin1`](https://xqriskcore-production.up.railway.app) → `Admin → User Action Logs`  
+  → Filter by user or role to view actions: **viewed**, **submitted**, **overrode**, or **rejected** — all immutably stored.
+
+⬇️ UI Preview  
 <img width="1304" alt="User Action Log Viewer" src="assets/xq_user_logs.png" />
 
-#### 🧠 Why Logging Matters
+#### 🧠 Why It Matters
 
-A real risk officer doesn’t log for vanity — they log for the **moments that matter**:
+Risk officers don’t log for vanity — they log for **moments that matter**:
 
-- 🕵️ **Regulatory investigations**  
-- 🧾 **Internal audits and governance reviews**  
-- ⚖️ **Legal evidence in dispute scenarios**  
-- 💼 **Accountability to boards, investment committees, or external funders**
+- 🕵️ Regulatory investigations  
+- 🧾 Internal audits  
+- ⚖️ Disputes & legal defense  
+- 💼 Board accountability
 
-Behavioral logs are not just for debugging — they are **defensive assets** in institutional-grade risk governance.
+Logs aren’t debugging tools — they’re **compliance weapons**.
 
-#### 📌 What Each Log Captures
+#### 📌 Logged Fields
 
-Every action record includes:
+Each action includes:
 
-- **`user_id`** — who triggered the action  
-- **`timestamp`** — when it occurred  
-- **`module`** — where it happened in the system  
-- **`action`** — what was done (e.g., submitted, rejected)  
-- **`status` / `override_flag`** — was it approved, denied, or bypassed  
-- **`trace_path`** — which components or roles participated in the decision lifecycle  
+- `user_id` – who did it  
+- `timestamp` – when  
+- `module` – where  
+- `action` – what  
+- `status`, `override_flag` – approved, rejected, bypassed  
+- `trace_path` – who was involved  
 
-These structured records support downstream workflows such as:
-- Anomaly detection  
-- Compliance reporting  
-- Risk override tracebacks  
-- Strategy performance attribution  
+These feed:
+
+- 🔍 Anomaly detection  
+- 📊 Risk reporting  
+- 🧠 Strategy attribution  
+- 🧾 Compliance tracebacks
+
 ---
 
 ## 🛡️ Emergency Guard Layer
 
-The Emergency Guard Layer serves as XQRiskCore’s final line of defense — enforcing **system stability**, **audit integrity**, and **strategy discipline** under both normal and degraded conditions.
+XQRiskCore’s final line of defense — enforcing **stability**, **audit integrity**, and **strategy discipline**, even under failure or attack.
 
-It is designed to **fail safe**, not fail silently.
+It’s designed to **fail safe**, not fail silently.
 
-### ✅ Active Safeguard Modules
+### ✅ Active Safeguards
 
-| Module                | Description                                                                 | Status    |
-|-----------------------|-----------------------------------------------------------------------------|-----------|
-| `SystemGuard`         | Blocks trade execution if data feeds, APIs, or core services are unavailable | ✅ Active |
-| `StrategyThrottler`   | Temporarily suspends overly frequent or repeatedly failing strategies         | ✅ Active |
-| `TradeAuditFailSafe`  | Invalidates trades post-execution if audit logs fail to write                 | ✅ Active |
-| `KillSwitchManager`   | Programmatic circuit breaker for locking accounts or specific asset activity | ✅ Active |
-| `runtime_controls.py` | Provides a UI-based interface for triggering emergency lockdowns manually     | ✅ Active |
+| Module                | Function                                                        | Status    |
+|-----------------------|------------------------------------------------------------------|-----------|
+| `SystemGuard`         | Blocks execution if core services (API/data) go down            | ✅ Active |
+| `StrategyThrottler`   | Suspends overly frequent or failing strategies                  | ✅ Active |
+| `TradeAuditFailSafe`  | Cancels trades if audit logs cannot persist                     | ✅ Active |
+| `KillSwitchManager`   | Locks accounts/assets on risk breach                            | ✅ Active |
+| `runtime_controls.py` | UI trigger for emergency lockdowns                              | ✅ Active |
 
-These modules ensure the system remains **governable**, **observable**, and **safe to operate** — even in edge cases where strategy logic, infrastructure, or user behavior becomes unreliable.
+These guards keep the system **governable, observable, and survivable** — even when strategies break or infrastructure degrades.
 
 📄 [See `04_emergency_guard_layer.md`](04_emergency_guard_layer.md)  
-Includes:
+Covers:
 
-- 🛡️ How the Emergency Guard Layer protects against system failure, audit loss, and runaway strategies  
-- ⚙️ Descriptions of active modules like `SystemGuard`, `KillSwitchManager`, and `TradeAuditFailSafe`  
-- 🔁 Execution lifecycle hooks: pre-trade, post-trade, and override-stage intercepts  
-- 🧠 Design rationale for fail-safe logic under degraded or adversarial conditions  
-- 🔍 Full-traceability enforcement across manual, strategy, and automated executions  
-- 🔒 Planned upgrades: circuit breakers, breach alerting, and privileged override audit mechanisms
+- 🛡️ Failure containment: audit loss, system outages, runaway logic  
+- ⚙️ Modules: `SystemGuard`, `KillSwitchManager`, `AuditFailSafe`  
+- 🔁 Lifecycle hooks: pre-trade, post-trade, override-stage  
+- 🔍 Full-traceability across manual, strategy, and auto execution  
+- 🔒 Planned: circuit breakers, alerting, privileged override audits
 
 ---
 
@@ -484,152 +482,129 @@ price = market.get_latest_price("AAPL")
 
 ## 🧮 Functional Overview
 
-**XQRiskCore** is a unified risk governance system that integrates trade routing, approval, control, and audit into a single, enforceable lifecycle.  
-It is built around the principle that **every trade must pass through the same discipline** — regardless of origin.
+**XQRiskCore** unifies trade routing, approval, control, and audit into a single, enforceable lifecycle.  
+Every trade — regardless of origin — must pass through the same discipline.
 
 ### 🔒 Integrated Risk Coverage
 
-XQRiskCore embeds controls for all three major classes of financial risk:
+Controls span all three major financial risk classes:
 
-- **Market Risk** — price volatility, VaR breaches, drawdowns, stop-loss triggers, and exposure imbalances  
-  → Mitigated via: volatility forecasting, VaR-based scoring, drawdown-sensitive KillSwitches, and asset-level lockdowns
+- **Market Risk** — volatility, VaR breaches, drawdowns  
+  → Mitigated via scoring, KillSwitches, and asset-level lockdowns
 
-- **Operational Risk** — execution errors, unauthorized behavior, process failures, and missing audit trails  
-  → Controlled through: trade intent approvals, Silent Mode post-trade enforcement, and structured audit logging
+- **Operational Risk** — execution errors, unauthorized behavior, audit gaps  
+  → Controlled through intent approvals, Silent Mode, and structured logging
 
-- **Governance / Compliance Risk** — role overreach, unauthorized access, invisible operations, and policy circumvention  
-  → Enforced via: role-based access control (RBAC), permission scoping, audit chains, and cooling-off mechanisms
+- **Governance Risk** — role overreach, invisible actions, policy bypass  
+  → Enforced via RBAC, permission scoping, audit chains, and cooling-off
 
 ### ⚙️ Core System Capabilities
 
-- ✅ **Unified trade flow** — Manual trades, strategy signals, and system rebalances all pass through a single approval pipeline  
-- ✅ **Built-in risk control** — VaR thresholds, asset-specific lockdowns, KillSwitches, and Silent Mode enforcement  
-- ✅ **Structured audit logs** — Every action is logged with `user_id`, `timestamp`, `module`, `action`, `status`, and approval trace  
-- ✅ **Client-specific config** — Assets, strategies, and risk rules are isolated per `client_id` for multi-tenant governance  
-- ✅ **Role-based governance** — RBAC enforcement and behavioral tracking ensure strict control and traceability  
+- ✅ **Unified trade flow** — All sources pass through one approval pipeline  
+- ✅ **Built-in risk control** — VaR limits, KillSwitches, and Silent Mode  
+- ✅ **Structured audit logs** — Action metadata: `user_id`, `timestamp`, `action`, `status`, trace path  
+- ✅ **Client-specific config** — Per-client assets, strategies, and risk rules  
+- ✅ **Role-based governance** — RBAC with behavioral logging and scope control
 
 ---
 
 ## 📌 Use Cases
 
-XQRiskCore was designed to solve a simple but critical problem:  
-🧠 *How do we ensure that every trade — no matter how it starts — is allowed, reviewed, executed, and recorded under a defensible system?*
+XQRiskCore solves a simple but critical problem:  
+🧠 *How do we ensure every trade — regardless of origin — is reviewed, executed, and recorded under a defensible system?*
 
-At its core, it was built to answer governance-level questions that most systems avoid:
+It answers governance-level questions most systems avoid:
 
-- **“Who gets the final say on approvals — and under what logic?”**  
-- **“Can emotional or biased trading decisions be structurally blocked?”**  
-- **“Are risk outcomes logged in a traceable, structured format?”**  
-- **“When strategies behave erratically, can we pinpoint where and why?”**
+- **Who approves — and under what logic?**  
+- **Can biased decisions be structurally blocked?**  
+- **Are risk outcomes traceable by design?**  
+- **Can strategy failures be traced to their source?**
 
-It is purpose-built for:
+Built for:
 
-- ✅ **Multi-strategy fund desks** that need unified, explainable risk control across manual, quant, and system trades  
-- ✅ **Mid-sized asset managers** seeking lightweight but auditable governance frameworks without enterprise overhead  
-- ✅ **Quant & strategy teams** requiring integrated approval pipelines with lifecycle tracking and scoring  
-- ✅ **Compliance-aware firms** that want behavior logs, override records, and policy enforcement — built-in  
-- ✅ **Risk officers and auditors** who demand evidence chains, not post-mortems  
+- ✅ **Multi-strategy fund desks** needing unified, explainable risk control  
+- ✅ **Asset managers** seeking auditable governance without enterprise overhead  
+- ✅ **Quant teams** requiring lifecycle tracking and approval scoring  
+- ✅ **Compliance-focused firms** needing logs, overrides, and policy enforcement  
+- ✅ **Risk officers and auditors** demanding traceable decision chains
 
-XQRiskCore is for those who believe risk is not just about limits — it’s about **structure, traceability, and responsibility**.
+Because risk isn’t just about limits — it’s about **structure, traceability, and responsibility**.
 
 ---
 
 ## 🚧 Roadmap & Evolution Overview
 
-XQRiskCore is functionally deployed and currently operates on a modular Python architecture with full trade lifecycle coverage, risk gating, and audit logging. The next evolution focuses on **production-grade scalability, cloud deployment, and system hardening**.
+XQRiskCore is live with full trade lifecycle coverage, risk gating, and audit logging.  
+Next: production-grade scalability, microservice refactor, and institutional readiness.
 
-| **Category**         | **Current State**                                 | **Planned Evolution & Next Steps**                                      |
-|----------------------|---------------------------------------------------|-------------------------------------------------------------------------|
-| 🧠 Governance Logic   | YAML-based rules, modular risk signal engine      | Runtime hot-swap, rule versioning, permission inheritance               |
-| 🧮 Scoring System     | Integrated HMM, GARCH, VaR, CVaR pipeline         | Plug-in engine support, feedback loop optimization                      |
-| 🔐 Access Control     | RBAC role model with UI/module scoping            | Add token-based auth (JWT), permission templating                       |
-| 📤 Execution Layer    | Broker-agnostic API interface implemented (Alpaca paper/live tested)    | Upgrade to FIX upon institutional onboarding      |
-| 🗃️ Data Persistence   | YAML config + JSONL audit logs                    | Migrate to PostgreSQL / MongoDB                                         |
-| 🧱 Service Structure  | Interfaces (e.g., `TradeFlowService`) decoupled   | Refactor into Flask / FastAPI microservices                            |
-| ⚙️ Scheduling System  | Single-threaded, sync lifecycle engine            | Introduce Celery / Airflow for async & batch task orchestration         |
-| ☁️ Deployment Target  | Cloud-hosted via Railway (PaaS)                   | Scalable deployment on EC2 / GCP with production-grade infra            |
-| 🧬 Long-term Refactor | Python for speed and modularity                   | Rebuild in Java / C++ for real-time, low-latency institutional use cases|
+| **Area**              | **Current**                                | **Next**                                                  |
+|-----------------------|--------------------------------------------|------------------------------------------------------------|
+| Governance Logic      | YAML rules, modular signal engine          | Runtime hot-swap, version control                          |
+| Risk Scoring          | HMM, GARCH, VaR, CVaR                      | Plug-in engines, feedback loop                             |
+| Access Control        | RBAC roles + UI/module scoping             | Token auth, permission templates                           |
+| Execution Layer       | Broker-agnostic API (Alpaca)               | Upgrade to FIX-ready architecture                          |
+| Data Layer            | YAML + JSONL audit logs                    | PostgreSQL or MongoDB                                      |
+| Services              | Interface-based logic (e.g., `TradeFlow`)  | Flask/FastAPI microservices                                |
+| Scheduling            | Sync lifecycle engine                      | Celery / Airflow orchestration                             |
+| Deployment            | Cloud via Railway                          | EC2 / GCP + scalable infra                                 |
+| Long-Term Refactor    | Python (modular, fast dev)                 | Rebuild in Java/C++ for low-latency trading                |
 
 ---
 
 ## 🌱 Evolution by Design
 
-Every module is designed for **iterative upgrades**, not just patch fixes.
+Every module is built for upgrades — not hard rewrites.
 
-- New approval logic? Plug it in.  
-- New scoring factors? Extend the framework.  
-- New oversight roles? Add them through RBAC.  
-- New audit structures? Trace them out of the box.
+- New rules? Add via YAML.  
+- New scores? Extend plug-ins.  
+- New roles? RBAC handles it.  
+- New audits? Log and trace.
 
-Because real risk governance doesn’t stand still.  
-**It evolves. And XQRiskCore evolves with you.**
+**Governance evolves. So does XQRiskCore.**
 
 ---
 
-## 🧬 Who am I?
+## 🧬 Who Am I?
 
-I’m a graduating PhD in statistical genetics, where I specialized in building interpretable models for complex systems and risk behavior. 
+I’m a graduating PhD in statistical genetics, where I specialized in modeling complex systems and risk behavior.  
 **XQ** is my name.
 
 While preparing for the **FRM Part 1** exam, I set myself a challenge:  
-Not just to learn financial risk from textbooks — but to build a real system that applies institutional-grade governance to strategy execution.
+To use my skills in statistics and programming — not just to study financial risk, but to **build** it.
 
-The result is **XQRiskCore**, also my **first project in financial risk**.  
+The result is **XQRiskCore** — my first project in financial risk.  
 
 ---
 
 ## 🤝 Collaboration & Opportunities
 
-### 🔗 I'm open to collaboration with:
+I'm open to:
 
-- ✅ **Fund or asset managers** building internal risk infrastructure  
-- ✅ **Quant and strategy teams** looking to route signals through auditable pipelines  
-- ✅ **Compliance and audit leads** needing structured logs and traceable decision trails  
-- ✅ **Research groups** exploring modern approaches to automated risk governance  
-- ✅ **Traders and strategy teams** looking to route discretionary or systematic signals through auditable pipelines
+- ✅ Partnering with funds, quant teams, or compliance leads building auditable risk infrastructure  
+- ✅ Projects involving governance-driven strategy execution or automated trade control  
+- ✅ Roles in **quant/risk engineering**, **approval architecture**, or **institutional risk governance**
 
-### 🚀 I'm also open to roles or projects involving:
+If you're building something serious — or looking for someone who does — feel free to reach out:
 
-- ⚙️ **Quant or risk engineering** with a focus on systems thinking  
-- 🧱 **Governance system design** for institutional risk control  
-- 📊 **Building or extending approval infrastructure** for multi-strategy funds  
-
-If you're building something serious — or looking for someone who does — feel free to reach out.
-
-- 📧 **Work Email**: [x.qian@uq.edu.au](mailto:x.qian@uq.edu.au)  
-- 📧 **Personal Email**: [qianxiaoyu19@gmail.com](mailto:qianxiaoyu19@gmail.com)  
-- 🔗 **LinkedIn**: [xiaoyu-qian-003882212](https://www.linkedin.com/in/xiaoyu-qian-003882212)
+- 📧 [x.qian@uq.edu.au](mailto:x.qian@uq.edu.au)  
+- 📧 [qianxiaoyu19@gmail.com](mailto:qianxiaoyu19@gmail.com)  
+- 🔗 [LinkedIn](https://www.linkedin.com/in/xiaoyu-qian-003882212)
 
 ---
 
 ## 🙏 Acknowledgments
 
-I owe deep gratitude to this era — an era shaped by large language models.
+I built XQRiskCore with help from large language models — not just as tools, but as thinking partners.  
+**ChatGPT** helped architect logic, **DeepSeek** visualized workflows, and **Gemini** challenged the structure.
 
-When I built XQRiskCore, I often imagined myself as Tony Stark, and these models as my Jarvis.  
-I spent countless nights conversing with ChatGPT to sharpen my understanding of financial risk,  
-and it proved invaluable — not just in ideation and modeling, but in actual design and coding.
+I’m deeply grateful to my PhD advisors, **Allan McRae** and **Fleur Garton**, whose modeling discipline shaped much of the system’s architecture.
 
-- **ChatGPT** helped architect risk pipelines, improve system logic, and challenge my own assumptions.
-- **DeepSeek** allowed me to visualize complex workflows rapidly and clearly.
-- **Gemini** offered second-opinion critiques and structural feedback on my system design.
+Two ideas guided this project from the ground up:
 
-Their collective input helped me cross-validate risk ideas from different perspectives.
+- **Charlie Munger’s latticework thinking**, which taught me to cross-pollinate abstractions from genetics to finance.  
+- **Warren Buffett’s lesson from LTCM** — that “you can’t survive a margin call even if you’re right” — which defined my priority: discipline over brilliance.
 
-I also want to sincerely thank my PhD advisors, **Associate Professor Allan McRae** and **Dr. Fleur Garton**.  
-The conceptual rigor and modeling frameworks I learned under their guidance  
-inspired many of the abstractions I applied here, from layered architecture to signal integration.
-
-Though we never met, I also want to pay tribute to the late **Charlie Munger**,  
-whose latticework thinking helped me bridge what I learned in my PhD  
-to the architecture of financial systems.  
-His ideas made this kind of transfer possible.
-
-I’m also grateful for the wisdom of **Warren Buffett**, whose reflections on LTCM  
-— that “you can’t survive a margin call even if you’re right” —  
-deeply shaped my understanding of **discipline over brilliance** in risk control.
-
-Without all of them, I could not have built even one-tenth of what you now see in XQRiskCore.
+Without those principles, this system would not exist — at least not in this form.
 
 ---
 
