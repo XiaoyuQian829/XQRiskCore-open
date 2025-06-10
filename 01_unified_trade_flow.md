@@ -52,7 +52,7 @@ From `TradeIntent` submission (left) to final audit and post-trade update (right
 ### Example 2: Strategy Trade
 
 #### 🔹 Intent Metadata
-<img width="838" alt="Screenshot 2025-06-07 at 9 45 17 PM" src="asset/01/reject_intent.png" />
+<img width="838" alt="Screenshot 2025-06-07 at 9 45 17 PM" src="assets/01/reject_intent.png" />
 
 #### 🧾 TradeIntent Field Reference (Strategy-Triggered)
 
