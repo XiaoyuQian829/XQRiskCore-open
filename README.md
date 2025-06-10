@@ -2,13 +2,16 @@
 
 > **A governance-grade risk control engine for trading** — with unified trade approval, structured audit logging, role-based access control, and multi-layer enforcement.
 
+> ⚠️ Tired of projects that ask you to install before you understand?  
+> XQRiskCore flips the script: **Try it first — then see how deep the governance goes.**
+
 ---
 
-🚀 Jump in as an admin, trader, risker or auditor — no setup required.  
+🚀 Jump in as an admin, trader, or auditor — no setup required.  
 🎯 Live Demo → [xqriskcore-production.up.railway.app](https://xqriskcore-production.up.railway.app)
 
 <p align="center">
-  <img src="assets/xq_login.png" width="500" />
+  <img src="assets/xq_login.png" width="600" />
 </p>
 
 *Deployed on Railway. Optimized for responsiveness, audit visibility, and governance transparency.*
