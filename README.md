@@ -263,7 +263,7 @@ This governance design ensures that every operation is **traceable, auditable, a
   → Manage clients, assign roles, and activate/deactivate users in a secure, controlled interface.
 
 ⬇️ **Client & User Management Interface**  
-<img width="1304" alt="Client/User Management" src="assets/xq_decision_logs.png" />
+<img width="1304" alt="Client/User Management" src="assets/xq_user_manager.png" />
 
 - 👉 [**Still as `admin`**](https://xqriskcore-production.up.railway.app)  
   → Go to **`Admin → Role Permission Matrix`**  
