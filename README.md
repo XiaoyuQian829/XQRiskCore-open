@@ -544,7 +544,7 @@ Because real risk governance doesn’t stand still.
 
 ## 🧬 Who am I?
 
-I’m a graduating PhD specializing in modeling complex systems and risk dynamics. My name is **XQ**.
+I’m a graduating PhD in statistical genetics, where I specialized in building interpretable models for complex systems and risk behavior. My name is **XQ**.
 
 While preparing for the **FRM Part 1** exam, I set myself a challenge:  
 Not just to learn financial risk from textbooks — but to build a real system that applies institutional-grade governance to strategy execution.
