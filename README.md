@@ -89,7 +89,7 @@ Every source — whether it’s a button click, a strategy trigger, or a schedul
 → Intent → Risk Signal → Approval → Execution → Audit → Post-Trade Monitoring
 
 #### 📊 Figure 1: XQRiskCore Risk-Controlled Trade Lifecycle
-![Trade Flow](https://github.com/user-attachments/assets/ad9b33ee-ba72-4be4-a2ad-2a4c26bf5073)
+![Trade Flow](assets/tradeflow.png)
 
 🧩 Want to understand how this unified trade pipeline actually works under the hood?
 
@@ -166,12 +166,12 @@ Try it:
   → Select a client and submit a trade form to trigger the full risk approval flow.
 - 👉 [**Login as `quant_researcher` (Role: Quant Researcher)**](https://xqriskcore-production.up.railway.app)  
   → Activate a strategy and observe how it routes through the same unified trade lifecycle.
-![Audit Screenshot](https://github.com/user-attachments/assets/8f867817-45a5-4aed-92fc-1f7f89465447)
+![Audit Screenshot](assets/xq_submit_trade.png)
 
 - 👉 [**Login as `auditor` (Role: Auditor)**](https://xqriskcore-production.up.railway.app)  
   → Go to **`Audit: Decision Records`**  
   → Review detailed decision records, including approvals, rejections, risk scores, and override flags.
-![Audit Detail](https://github.com/user-attachments/assets/1ac04e3d-11e6-4ac1-828d-776907974e1b)
+![Audit Detail](assets/xq_decision_logs.png)
 
 ---
 
@@ -263,14 +263,14 @@ This governance design ensures that every operation is **traceable, auditable, a
   → Manage clients, assign roles, and activate/deactivate users in a secure, controlled interface.
 
 ⬇️ **Client & User Management Interface**  
-<img width="1304" alt="Client/User Management" src="https://github.com/user-attachments/assets/51260ae1-acb4-467f-9b2d-56a2401e9acb" />
+<img width="1304" alt="Client/User Management" src="assets/xq_decision_logs.png" />
 
 - 👉 [**Still as `admin`**](https://xqriskcore-production.up.railway.app)  
   → Go to **`Admin → Role Permission Matrix`**  
   → Review and configure role-specific access rights with full visibility.
 
 ⬇️ **Permission Control Matrix View**  
-<img width="1321" alt="Permission Matrix" src="https://github.com/user-attachments/assets/7072f1da-9b80-4b68-9a44-537094837b6d" />
+<img width="1321" alt="Permission Matrix" src="assets/xq_role_permission.png" />
 
 📄 [See `03_rbac.md`](03_rbac.md)  
 Includes:
@@ -313,7 +313,7 @@ Each file captures a full day of timestamped, structured event records.
   → Explore a structured, role-filtered log viewer that captures everything users **viewed**, **submitted**, **triggered**, or **overrode** — all immutably recorded for audit and accountability.
 
 ⬇️ **User Action Log Viewer**  
-<img width="1304" alt="User Action Log Viewer" src="https://github.com/user-attachments/assets/af13385a-8e53-4dff-9f8d-b0d9fe3dbea7" />
+<img width="1304" alt="User Action Log Viewer" src="assets/xq_user_logs.png" />
 
 #### 🧠 Why Logging Matters
 
