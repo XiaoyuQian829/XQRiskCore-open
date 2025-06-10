@@ -4,18 +4,19 @@
 
 ---
 
-## ⚙️ Built for Discipline. Powered by Clarity.
+## ⚙️ Built to Govern, Not Just Execute
 
-**XQRiskCore** is not a trading sandbox.  
-It is a system of control — designed to govern every trade, enforce compliance, and make risk explainable before it compounds.
+**XQRiskCore** enforces policy before trades happen — not after they go wrong.
 
-🔁 **Unifies all trade sources** under a single, structured lifecycle  
-🧾 **Logs decisions** with structured metadata and audit trails  
-🔐 **Restricts permissions** via role-based access control (RBAC)  
-🛡️ **Enforces safeguards** across pre-trade, post-trade, and end-of-day
+It routes every trade through a structured lifecycle:
+- ⛓️ From submission to approval  
+- 🧾 From scoring to audit logging  
+- 🛡️ From detection to multi-layered safeguards
 
-Where most systems route orders, **XQRiskCore routes accountability.**  
-Every trade — manual or algorithmic — must be scored, approved, and logged before execution.
+Whether triggered by a trader, a strategy, or a rebalancer —  
+**every action is accountable, every override is tracked, and every permission is scoped.**
+
+> **This is not order routing. It's responsibility routing.**
 
 ---
 
@@ -51,14 +52,12 @@ As a solo developer with a background in statistical modeling and financial risk
 
 Its design foundations are:
 
-- To unify all trade sources under a single, governed lifecycle  
-- To enforce every decision through structured, auditable rules  
-- To log not just actions — but **accountability**  
-- To make risk **visible**, **explainable**, and **enforceable**  
-- To embed **compliance logic** into the system itself — not layered on top
+- To **embed compliance** directly into the trading process  
+- To **log structured decisions**, not just outcomes  
+- To **restrict permissions** based on role and scope  
+- To **monitor risk continuously**, not retroactively
 
-What sets XQRiskCore apart is clarity: every decision is traceable, every rule is testable, and every action is governed by policy.  
-You don’t have to take my word for it — the live system is available for full transparency and inspection.
+What sets XQRiskCore apart is clarity: every decision is traceable, every rule is testable, and every action is governed by policy.
 
 > 🎯 [Click here to access XQRiskCore](https://xqriskcore-production.up.railway.app)
 
@@ -77,6 +76,7 @@ Listen to the official theme track — composed by AI, inspired by structure:
 
 Let the music carry the logic.  
 **Structured. Watchful. Unyielding.**
+
 
 
 ---
