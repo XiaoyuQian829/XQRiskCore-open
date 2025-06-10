@@ -29,7 +29,7 @@ Real-time checks during market hours continuously evaluate:
 
 ![Intraday Logic](assets/02/intraday_flow.png)
 
-- 👉 [**Login as `admin1` (Role: Admin)**](https://xqriskcore-production.up.railway.app)  
+- 👉 [**Login as `admin` (Role: Admin)**](https://xqriskcore-production.up.railway.app)  
   → Go to **`Admin: Intraday Trigger Rules`** to configure per-client scanning frequency — balancing performance and risk sensitivity.
 ⬇️ Example: Client-specific intraday risk settings  
 <img width="991" alt="Client-Specific Intraday Settings" src="assets/02/intraday_setting.png" />
@@ -60,7 +60,7 @@ Accounts or assets breaching EOD policies are placed in **lockdown**, preventing
 
 In addition to automated enforcement, **XQRiskCore** provides manual safeguards — allowing risk officers to proactively activate **Kill Switches** and **Silent Modes** when necessary.
 
-- 👉 [**Login as `risker1` (Role: Risk Officer)**](https://xqriskcore-production.up.railway.app)  
+- 👉 [**Login as `risker` (Role: Risk Officer)**](https://xqriskcore-production.up.railway.app)  
   → Go to **`Risker: Runtime Safeguards`**  
   → Manually enforce account- or asset-level trading restrictions in real time.
 
