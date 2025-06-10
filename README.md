@@ -574,11 +574,7 @@ I’m a graduating PhD in statistical genetics, where I specialized in building 
 While preparing for the **FRM Part 1** exam, I set myself a challenge:  
 Not just to learn financial risk from textbooks — but to build a real system that applies institutional-grade governance to strategy execution.
 
-The result is **XQRiskCore**:  
-A modular, audit-friendly risk engine where **manual trades**, **systematic strategies**, and **passive rebalances** all flow through a single, unified pipeline of approval, execution, and logging.  
-It’s built to enforce discipline, trace decisions, and separate signal from behavior — regardless of how the trade was initiated.
-
-This is my **first project in financial risk**.  
+The result is **XQRiskCore**, also my **first project in financial risk**.  
 
 ---
 
