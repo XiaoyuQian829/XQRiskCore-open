@@ -1,30 +1,47 @@
 # XQRiskCore
 
+> **A governance-grade risk control engine for trading** — with unified trade approval, structured audit logging, role-based access control, and multi-layer enforcement.
+
+---
+
+## ⚙️ Built for Discipline. Powered by Clarity.
+
+**XQRiskCore** is not a trading sandbox.  
+It is a system of control — designed to govern every trade, enforce compliance, and make risk explainable before it compounds.
+
+🔁 **Unifies all trade sources** under a single, structured lifecycle  
+🧾 **Logs decisions** with structured metadata and audit trails  
+🔐 **Restricts permissions** via role-based access control (RBAC)  
+🛡️ **Enforces safeguards** across pre-trade, post-trade, and end-of-day
+
+Where most systems route orders, **XQRiskCore routes accountability.**  
+Every trade — manual or algorithmic — must be scored, approved, and logged before execution.
+
+---
+
 ## 📑 Table of Contents
 
 - [🧭 System Origins & Design Philosophy](#-system-origins--design-philosophy)
 - [📚 Institutional Inspirations](#-institutional-inspirations)
 - [✅ Core Capabilities](#-core-capabilities)
-  - [🔁 Unified Trade Flow](#1-️-unified-trade-flow--one-pipe-for-all-trades)
-  - [🧠 Dual-Path Risk Control Architecture](#2-🧠-dual-path-risk-control-architecture)
-    - [1️⃣ Pre-Trade Approval](#1️⃣-pre-trade-approval)
-    - [🧯 2️⃣ Post-Trade Monitoring](#️-2️⃣-post-trade-monitoring--risk-trigger-system)
-    - [🧬 Closed-Loop Monitoring Philosophy](#🧬-closed-loop-monitoring-philosophy)
-  - [🧱 Role-Based Governance (RBAC)](#3-🧱-role-based-governance-rbac)
-  - [🧾 Structured Behavioral Logging](#4-🧾-structured-behavioral-logging)
-- [🛡️ Emergency Guard Layer](#️-emergency-guard-layer)
+  - [🔁 Unified Trade Flow](#-unified-trade-flow)
+  - [🧠 Dual-Path Risk Control](#-dual-path-risk-control)
+  - [🧱 Role-Based Governance (RBAC)](#-role-based-governance-rbac)
+  - [🧾 Structured Behavioral Logging](#-structured-behavioral-logging)
+- [🛡️ Emergency Guard Layer](#-emergency-guard-layer)
 - [🧩 System Architecture](#-system-architecture)
-- [🧩 Service Interface Abstraction](#-service-interface-abstraction)
+- [🔌 Service Interface Abstraction](#-service-interface-abstraction)
 - [🧮 Functional Overview](#-functional-overview)
 - [📌 Use Cases](#-use-cases)
-- [🚧 Roadmap & Evolution Overview](#-roadmap--evolution-overview)
+- [🚧 Roadmap & Evolution](#-roadmap--evolution)
 - [🌱 Evolution by Design](#-evolution-by-design)
-- [🧬 Who am I?](#-who-am-i)
+- [🧬 Who Am I?](#-who-am-i)
 - [🤝 Collaboration & Opportunities](#-collaboration--opportunities)
 - [🙏 Acknowledgments](#-acknowledgments)
 - [📄 License](#-license)
 - [📬 Contact](#-contact)
 
+---
 
 ## 🧭 System Origins & Design Philosophy
 
@@ -51,6 +68,8 @@ You don’t have to take my word for it — the live system is available for ful
 
 *Deployed on Railway. Optimized for responsiveness, audit visibility, and governance transparency.*
 
+---
+
 🎧 **Want to hear what a system of discipline sounds like?**  
 Listen to the official theme track — composed by AI, inspired by structure:
 
@@ -58,6 +77,7 @@ Listen to the official theme track — composed by AI, inspired by structure:
 
 Let the music carry the logic.  
 **Structured. Watchful. Unyielding.**
+
 
 ---
 
