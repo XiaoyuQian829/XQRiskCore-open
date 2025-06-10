@@ -4,7 +4,7 @@
 
 ---
 
-🚀 Jump in as an admin, trader, or auditor — no setup required.  
+🚀 Jump in as an admin, trader, risker or auditor — no setup required.  
 🎯 Live Demo → [xqriskcore-production.up.railway.app](https://xqriskcore-production.up.railway.app)
 
 <p align="center">
