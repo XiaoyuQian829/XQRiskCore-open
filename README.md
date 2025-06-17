@@ -60,6 +60,7 @@ When failures happen, it’s already too late.
 
 > **Governance isn’t a wrapper. It’s the foundation.**
 
+---
 
 ### 🔍 What Went Wrong — and What I Built to Fix It
 
@@ -73,6 +74,7 @@ I studied 10 major failures — not for drama, but to see what broke:
 | 🧟 Legacy code risk     | Knight Capital               | Old logic reactivated, no sandbox or fallback           | `Intent → Approval → Execution` lifecycle        |
 | 📉 Model overtrust      | LTCM, FTX                    | Smart models, zero enforceable guardrails               | `RiskSignalSet`, override tracking               |
 
+---
 
 ### 🧱 Built Bottom-Up — By Principle, Not Convention
 
