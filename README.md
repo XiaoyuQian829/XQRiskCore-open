@@ -97,7 +97,7 @@ Enforced by:
 
 ---
 
-### 📚 Institutional Inspirations
+## 📚 Institutional Inspirations
 
 **XQRiskCore** borrows lessons from world-class systems — but flips the build order.
 
