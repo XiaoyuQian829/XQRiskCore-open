@@ -20,32 +20,53 @@
 
 ## 📑 Table of Contents
 
-### 🧭 Why It Exists
-- [🧭 System Origins & Design Philosophy](#-system-origins--design-philosophy)
-- [📚 Institutional Inspirations](#-institutional-inspirations)
+### 1. 🧭 System Origins & Design Philosophy
+- [System Origins & Design Philosophy](#-system-origins--design-philosophy)
+- [What Went Wrong — and What I Built to Fix It](#-what-went-wrong--and-what-i-built-to-fix-it)
+- [Built Bottom-Up — By Principle, Not Convention](#-built-bottom-up--by-principle-not-convention)
 
-### ⚙️ How It Works
-- [✅ Core System Overview](#-core-system-overview)
-  - [🔁 Unified Trade Flow](#-unified-trade-flow)
-  - [🧠 Dual-Path Risk Control](#-dual-path-risk-control)
-  - [🧱 Role-Based Governance (RBAC)](#-role-based-governance-rbac)
-  - [🧾 Structured Behavioral Logging](#-structured-behavioral-logging)
-  - [🛡️ Emergency Guard Layer](#-emergency-guard-layer)
-  - [🧩 System Architecture](#-system-architecture)
-  - [🔌 Service Interface Abstraction](#-service-interface-abstraction)
+### 2. 📚 Institutional Inspirations
+- [Institutional Inspirations](#-institutional-inspirations)
 
-### 📊 How It’s Used
-- [🧮 Functional Overview](#-functional-overview)
-- [📌 Use Cases](#-use-cases)
+### 3. ✅ Core Capabilities
+- [Unified Trade Flow — One Pipe for All Trades](#-unified-trade-flow--one-pipe-for-all-trades)
+- [Dual-Path Risk Control Architecture](#-dual-path-risk-control-architecture)
+  - [1️⃣ Pre-Trade Approval](#1️⃣-pre-trade-approval)
+  - [2️⃣ Post-Trade Monitoring — Risk Trigger System](#2️⃣-post-trade-monitoring--risk-trigger-system)
+- [Role-Based Governance (RBAC)](#-role-based-governance-rbac)
+- [Structured Behavioral Logging](#-structured-behavioral-logging)
+- [Emergency Guard Layer](#️-emergency-guard-layer)
 
-### 🚀 What’s Next
-- [🚧 Roadmap & Evolution](#-roadmap--evolution)
-- [🌱 Evolution by Design](#-evolution-by-design)
-- [🧬 Who Am I?](#-who-am-i)
-- [🤝 Collaboration & Opportunities](#-collaboration--opportunities)
-- [🙏 Acknowledgments](#-acknowledgments)
-- [📄 License](#-license)
-- [📬 Contact](#-contact)
+### 4. 🧩 System Architecture
+- [System Architecture](#-system-architecture)
+- [Core Context Containers](#-core-context-containers)
+- [Core Architecture Overview](#-core-architecture-overview)
+- [Service Interface Abstraction](#-service-interface-abstraction)
+
+### 5. 🧮 Functional Overview
+- [Functional Overview](#-functional-overview)
+- [Integrated Risk Coverage](#-integrated-risk-coverage)
+- [Core System Capabilities](#-core-system-capabilities)
+
+### 6. 📌 Use Cases
+- [Use Cases](#-use-cases)
+
+### 7. 🚧 Roadmap & Evolution Overview
+- [Roadmap & Evolution Overview](#-roadmap--evolution-overview)
+- [Evolution by Design](#-evolution-by-design)
+
+### 8. 🧬 Who Am I?
+- [Who Am I?](#-who-am-i)
+
+### 9. 🤝 Collaboration & Opportunities
+- [Collaboration & Opportunities](#-collaboration--opportunities)
+
+### 10. 🙏 Acknowledgments
+- [Acknowledgments](#-acknowledgments)
+
+### 11. 📄 License
+- [License](#-license)
+
 
 
 ---
