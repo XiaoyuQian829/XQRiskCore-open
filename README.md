@@ -404,7 +404,7 @@ These feed:
 
 ---
 
-## 🛡️ Emergency Guard Layer
+## 🧯 Emergency Guard Layer
 
 XQRiskCore’s final line of defense — enforcing **stability**, **audit integrity**, and **strategy discipline**, even under failure or attack.
 
