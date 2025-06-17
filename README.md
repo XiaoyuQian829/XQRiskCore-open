@@ -341,11 +341,11 @@ Covers:
 
 ---
 
-### 4. 🧾 Structured Behavioral Logging
+#### 4. 🧾 Structured Behavioral Logging
 
 XQRiskCore logs **every user and system action** as structured metadata — enabling traceability, compliance, and post-trade forensics.
 
-#### 🧩 Action Types
+##### 🧩 Action Types
 
 | Type     | Description                      | Example                                |
 |----------|----------------------------------|----------------------------------------|
@@ -353,7 +353,7 @@ XQRiskCore logs **every user and system action** as structured metadata — enab
 | `action` | User-initiated operations        | Submitted a trade                      |
 | `system` | Automated system behavior        | Triggered Silent Mode                  |
 
-#### 🗂️ File Format & Storage
+##### 🗂️ File Format & Storage
 
 Logs are saved in newline-delimited JSON (`.jsonl`), partitioned by role, user, and date:
 
@@ -364,7 +364,7 @@ audit/user_action_logs/{role}/{user_id}/{YYYY-MM-DD}/events.jsonl
 
 Each file captures timestamped, structured records.
 
-#### 🔍 Admin Log Viewer
+##### 🔍 Admin Log Viewer
 
 - 👉 [Login as `admin1`](https://xqriskcore-production.up.railway.app) → `Admin → User Action Logs`  
   → Filter by user or role to view actions: **viewed**, **submitted**, **overrode**, or **rejected** — all immutably stored.
@@ -372,7 +372,7 @@ Each file captures timestamped, structured records.
 ⬇️ UI Preview  
 <img width="1304" alt="User Action Log Viewer" src="assets/xq_user_logs.png" />
 
-#### 🧠 Why It Matters
+##### 🧠 Why It Matters
 
 Risk officers don’t log for vanity — they log for **moments that matter**:
 
@@ -383,7 +383,7 @@ Risk officers don’t log for vanity — they log for **moments that matter**:
 
 Logs aren’t debugging tools — they’re **compliance weapons**.
 
-#### 📌 Logged Fields
+##### 📌 Logged Fields
 
 Each action includes:
 
@@ -403,13 +403,13 @@ These feed:
 
 ---
 
-## 🛡️ Emergency Guard Layer
+### 🛡️ Emergency Guard Layer
 
 XQRiskCore’s final line of defense — enforcing **stability**, **audit integrity**, and **strategy discipline**, even under failure or attack.
 
 It’s designed to **fail safe**, not fail silently.
 
-### ✅ Active Safeguards
+#### ✅ Active Safeguards
 
 | Module                | Function                                                        | Status    |
 |-----------------------|------------------------------------------------------------------|-----------|
@@ -432,7 +432,7 @@ Covers:
 
 ---
 
-## 🧩 System Architecture
+### 🧩 System Architecture
 
 XQRiskCore follows a four-layer architecture:
 
@@ -445,7 +445,7 @@ XQRiskCore follows a four-layer architecture:
 
 ---
 
-### 🧠 Core Context Containers
+#### 🧠 Core Context Containers
 
 | Context         | Scope                      | Role                                  | Created When                  | Represents                        |
 |-----------------|----------------------------|----------------------------------------|--------------------------------|------------------------------------|
@@ -455,7 +455,7 @@ XQRiskCore follows a four-layer architecture:
 
 ---
 
-### 🔄  Core Architecture Overview
+#### 🔄  Core Architecture Overview
 
 
                  ┌────────────────────────────┐
@@ -492,11 +492,11 @@ XQRiskCore follows a four-layer architecture:
 
 ---
 
-## 🧩 Service Interface Abstraction
+### 🧩 Service Interface Abstraction
 
 To demonstrate modular engineering capability and support SDK-like integration, core services in **XQRiskCore** have been refactored into interface classes. These interfaces decouple logic from orchestration, enabling independent testing, service injection, and future API exposure.
 
-### ✅ Implemented Service Interfaces
+#### ✅ Implemented Service Interfaces
 
 | Interface Class            | Role Description                                  |
 |----------------------------|----------------------------------------------------|
