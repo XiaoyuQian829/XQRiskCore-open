@@ -20,52 +20,44 @@
 
 ## 📑 Table of Contents
 
-### 1. 🧭 System Origins & Design Philosophy
-- [System Origins & Design Philosophy](#-system-origins--design-philosophy)
-- [What Went Wrong — and What I Built to Fix It](#-what-went-wrong--and-what-i-built-to-fix-it)
-- [Built Bottom-Up — By Principle, Not Convention](#-built-bottom-up--by-principle-not-convention)
+## 1. 🧭 System Origins & Design Philosophy
+- [System Origins & Design Philosophy](#1-🧭-system-origins--design-philosophy)
 
-### 2. 📚 Institutional Inspirations
-- [Institutional Inspirations](#-institutional-inspirations)
+## 2. 📚 Institutional Inspirations
+- [Institutional Inspirations](#2-📚-institutional-inspirations)
 
-### 3. ✅ Core Capabilities
-- [Unified Trade Flow — One Pipe for All Trades](#-unified-trade-flow--one-pipe-for-all-trades)
-- [Dual-Path Risk Control Architecture](#-dual-path-risk-control-architecture)
-  - [1️⃣ Pre-Trade Approval](#1️⃣-pre-trade-approval)
-  - [2️⃣ Post-Trade Monitoring — Risk Trigger System](#2️⃣-post-trade-monitoring--risk-trigger-system)
-- [Role-Based Governance (RBAC)](#-role-based-governance-rbac)
-- [Structured Behavioral Logging](#-structured-behavioral-logging)
-- [Emergency Guard Layer](#️-emergency-guard-layer)
+## 3. ✅ Core Capabilities
+- [Unified Trade Flow — One Pipe for All Trades](#3-✅-core-capabilities)
+- [Dual-Path Risk Control Architecture](#3-✅-core-capabilities)
+  - [Pre-Trade Approval](#3-✅-core-capabilities)
+  - [Post-Trade Monitoring — Risk Trigger System](#3-✅-core-capabilities)
+  - [Role-Based Governance (RBAC)](#3-✅-core-capabilities)
+  - [Structured Behavioral Logging](#3-✅-core-capabilities)
+  - [Emergency Guard Layer](#3-✅-core-capabilities)
 
-### 4. 🧩 System Architecture
-- [System Architecture](#-system-architecture)
-- [Core Context Containers](#-core-context-containers)
-- [Core Architecture Overview](#-core-architecture-overview)
-- [Service Interface Abstraction](#-service-interface-abstraction)
+## 4. 🧩 System Architecture
+- [System Architecture](#4-🧩-system-architecture)
 
-### 5. 🧮 Functional Overview
-- [Functional Overview](#-functional-overview)
-- [Integrated Risk Coverage](#-integrated-risk-coverage)
-- [Core System Capabilities](#-core-system-capabilities)
 
-### 6. 📌 Use Cases
-- [Use Cases](#-use-cases)
+## 5. 🧮 Functional Overview
+- [Functional Overview](#5-🧮-functional-overview)
 
-### 7. 🚧 Roadmap & Evolution Overview
-- [Roadmap & Evolution Overview](#-roadmap--evolution-overview)
-- [Evolution by Design](#-evolution-by-design)
 
-### 8. 🧬 Who Am I?
-- [Who Am I?](#-who-am-i)
+## 6. 📌 Use Cases — Built to Prevent What Actually Happens
+- [Governance Risk — When Roles Blur, Discipline Fails](#6-📌-use-cases--built-to-prevent-what-actually-happens)
+- [Operational Risk — When Systems Drift, Failures Multiply](#6-📌-use-cases--built-to-prevent-what-actually-happens)
+- [Market Risk — When Signals Exist, But No One Acts](#6-📌-use-cases--built-to-prevent-what-actually-happens)
 
-### 9. 🤝 Collaboration & Opportunities
-- [Collaboration & Opportunities](#-collaboration--opportunities)
+## 7. 🚧 Roadmap & Evolution Overview
+- [Roadmap & Evolution Overview](#7-🚧-roadmap--evolution-overview)
+- [Evolution by Design](#7-🚧-roadmap--evolution-overview)
 
-### 10. 🙏 Acknowledgments
-- [Acknowledgments](#-acknowledgments)
+## 8. 🧬 Who Am I?
+- [Who Am I?](#8-🧬-who-am-i)
+- [Collaboration & Opportunities](#9-🤝-collaboration--opportunities)
+- [Acknowledgments](#10-🙏-acknowledgments)
+- [License](#11-📄-license)
 
-### 11. 📄 License
-- [License](#-license)
 
 
 
