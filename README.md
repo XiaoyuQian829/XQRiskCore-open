@@ -153,6 +153,12 @@ Included:
 
 ### 2. 🧠 Dual-Path Risk Control Architecture
 
+> **Approve what deserves to go through.**  
+> **Monitor everything that actually did.**
+
+XQRiskCore turns logging into **automated containment** —  
+high-risk behavior is not just observed, but structurally blocked.
+
 XQRiskCore enforces risk through two layers:
 
 - **Pre-Trade Approval** — blocks high-risk trades before execution  
@@ -277,16 +283,6 @@ Covers:
 
 - **Black Swan KillSwitch** — e.g. S&P500 drops > 5% triggers lockdown  
 - **Slow Burn Lockdown** — 5 small losses without major drop triggers cooling phase
-
----
-
-#### 🧬 Monitoring Philosophy
-
-> Approve what deserves to go through.  
-> Monitor everything that actually did.
-
-XQRiskCore turns logging into **automated containment** — high-risk behavior is not just observed, but structurally blocked.
-
 
 ---
 
