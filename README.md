@@ -570,31 +570,40 @@ Controls span all three major financial risk classes:
 **XQRiskCore wasn’t built for hypotheticals.**  
 It responds directly to the *structural causes* behind real-world trading failures:
 
-| 💥 Failure | 🛠️ XQRiskCore Response |
-|-----------|-------------------------|
-| **Macquarie, MF Global**  
-Risk signals existed, but no one acted | `SilentTriggerEngine` auto-scans logs daily and enforces **lockdowns without human input**
-| **Enron, Wirecard**  
-Logs were missing or forged | `AuditLogger` creates immutable `.jsonl` logs; `AuditViewer` exposes full approval & override history
-| **Barings, FTX**  
-Same user could approve + trade | `RBAC` enforces strict role separation — submit, approve, execute are scoped and auditable
-| **Knight Capital**  
-Legacy code reactivated in production | Every trade flows through `Intent → Approval → Execution` — sandboxable, lifecycle-controlled
-| **LTCM, Archegos, FTX**  
-Smart models, no structural brakes | `RiskSignalSet` computes VaR, CVaR, regime scores — and structurally blocks when thresholds hit
-| **Lehman**  
-Run-up to collapse wasn’t interrupted | `KillSwitchManager` monitors exposures post-trade and **auto-locks accounts** on violation
-| **SocGen**  
-Rogue trader bypassed approvals | `TradeIntent` required for every action; approvals scoped via `RBAC`, no raw trade injection allowed
-| **Credit Suisse (Archegos)**  
-No per-asset risk monitoring | `AssetPosition` and per-asset scoring catch concentrated exposures early
-| **FTX (again)**  
-No override tracking | Every override is logged: `who`, `when`, `why` — traceable in `AuditViewer`
-| **Wirecard (again)**  
-Auditors couldn’t reconstruct timeline | `TradeLifecycleState` captures full history: intent → approval → execution → outcome
+## 🔒 Governance Risk — When Roles Blur, Discipline Fails
 
-> These aren’t edge cases.  
-> They’re the **default failure modes** of systems without structural governance.
+| 💥 Failure         | 📉 Structural Cause                                | 🛡️ XQRiskCore Response                                          |
+|--------------------|----------------------------------------------------|------------------------------------------------------------------|
+| **Barings, FTX**   | Same user could approve and execute trades         | `RBAC` enforces strict role separation: submit ≠ approve ≠ execute |
+| **SocGen**         | Rogue trader bypassed formal approvals             | `TradeIntent` required for every action; approvals scoped via `RBAC` |
+| **FTX (again)**    | No tracking of overrides or decision authority     | All overrides logged with `who`, `when`, `why` — shown in `AuditViewer` |
+| **Wirecard (again)** | Auditors couldn’t reconstruct decision history   | `TradeLifecycleState` records full trade flow, timestamped and traceable |
+
+---
+
+## 🔁 Operational Risk — When Systems Drift, Failures Multiply
+
+| 💥 Failure              | 📉 Structural Cause                                  | 🛡️ XQRiskCore Response                                          |
+|-------------------------|------------------------------------------------------|------------------------------------------------------------------|
+| **Enron, Wirecard**     | Logs were missing, falsified, or unverifiable       | `AuditLogger` creates immutable `.jsonl` logs; `AuditViewer` replays them |
+| **Knight Capital**      | Legacy code reactivated during production run       | All trades follow `Intent → Approval → Execution` lifecycle; sandboxable |
+| **Credit Suisse (Archegos)** | No per-asset risk view → silent concentration  | `AssetPosition` + scoring detect exposure buildup early per asset |
+
+---
+
+## 📉 Market Risk — When Signals Exist, But No One Acts
+
+| 💥 Failure           | 📉 Structural Cause                                      | 🛡️ XQRiskCore Response                                               |
+|----------------------|----------------------------------------------------------|----------------------------------------------------------------------|
+| **Macquarie, MF Global** | Risk signals existed, but no auto-action             | `SilentTriggerEngine` scans daily logs and **auto-locks risky assets/accounts** |
+| **LTCM, Archegos, FTX**  | Smart models, no structural brakes or trigger layers | `RiskSignalSet` computes VaR, CVaR, regime risk; blocks if breached |
+| **Lehman**               | Run-up to collapse wasn’t intercepted                | `KillSwitchManager` monitors post-trade exposure and locks accounts |
+
+---
+
+> ⚠️ These weren’t bugs. They were missing structures.  
+> **XQRiskCore builds those structures — before, during, and after every trade.**
+
 
 ---
 
