@@ -20,18 +20,25 @@
 
 ## 📑 Table of Contents
 
+### 🧭 Why It Exists
 - [🧭 System Origins & Design Philosophy](#-system-origins--design-philosophy)
 - [📚 Institutional Inspirations](#-institutional-inspirations)
-- [✅ Core Capabilities](#-core-capabilities)
+
+### ⚙️ How It Works
+- [✅ Core System Overview](#-core-system-overview)
   - [🔁 Unified Trade Flow](#-unified-trade-flow)
   - [🧠 Dual-Path Risk Control](#-dual-path-risk-control)
   - [🧱 Role-Based Governance (RBAC)](#-role-based-governance-rbac)
   - [🧾 Structured Behavioral Logging](#-structured-behavioral-logging)
-- [🛡️ Emergency Guard Layer](#-emergency-guard-layer)
-- [🧩 System Architecture](#-system-architecture)
-- [🔌 Service Interface Abstraction](#-service-interface-abstraction)
+  - [🛡️ Emergency Guard Layer](#-emergency-guard-layer)
+  - [🧩 System Architecture](#-system-architecture)
+  - [🔌 Service Interface Abstraction](#-service-interface-abstraction)
+
+### 📊 How It’s Used
 - [🧮 Functional Overview](#-functional-overview)
 - [📌 Use Cases](#-use-cases)
+
+### 🚀 What’s Next
 - [🚧 Roadmap & Evolution](#-roadmap--evolution)
 - [🌱 Evolution by Design](#-evolution-by-design)
 - [🧬 Who Am I?](#-who-am-i)
@@ -39,6 +46,7 @@
 - [🙏 Acknowledgments](#-acknowledgments)
 - [📄 License](#-license)
 - [📬 Contact](#-contact)
+
 
 ---
 
