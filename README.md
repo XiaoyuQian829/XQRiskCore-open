@@ -20,38 +20,36 @@
 
 ## 📑 Table of Contents
 
-### 🧭 System Foundations
-- [🧭 System Origins & Design Philosophy](#-system-origins--design-philosophy)
+**🧭 Foundations**
+- [System Origins & Design Philosophy](#-system-origins--design-philosophy)
+- [Institutional Inspirations](#-institutional-inspirations)
 
-### 📚 Inspirations & Architecture
-- [📚 Institutional Inspirations](#-institutional-inspirations)
+**✅ Core Capabilities**
+- [Unified Trade Flow](#-unified-trade-flow--one-pipe-for-all-trades)
+- [Dual-Path Risk Control Architecture](#-dual-path-risk-control-architecture)
+- [Role-Based Governance (RBAC)](#-role-based-governance-rbac)
+- [Structured Behavioral Logging](#-structured-behavioral-logging)
+- [Emergency Guard Layer](#-emergency-guard-layer)
 
-### ✅ Core Capabilities
-- [🔁 Unified Trade Flow — One Pipe for All Trades](#-unified-trade-flow--one-pipe-for-all-trades)
-- [🧠 Dual-Path Risk Control Architecture](#-dual-path-risk-control-architecture)
-- [🛡️ Role-Based Governance (RBAC)](#-role-based-governance-rbac)
-- [🧾 Structured Behavioral Logging](#-structured-behavioral-logging)
-- [🛡️ Emergency Guard Layer](#-emergency-guard-layer)
+**🧩 Architecture & Services**
+- [System Architecture](#-system-architecture)
+- [Service Interface Abstraction](#-service-interface-abstraction)
 
-### 🧩 Architecture & Services
-- [🧩 System Architecture](#-system-architecture)
-- [🧩 Service Interface Abstraction](#-service-interface-abstraction)
+**🧮 Functional Coverage**
+- [Functional Overview](#-functional-overview)
 
-### 🧮 Functional Coverage
-- [🧮 Functional Overview](#-functional-overview)
+**📌 Use Cases**
+- [Built to Prevent What Actually Happens](#-use-cases--built-to-prevent-what-actually-happens)
 
-### 📌 Use Cases
-- [📌 Use Cases — Built to Prevent What Actually Happens](#-use-cases--built-to-prevent-what-actually-happens)
+**🚧 Roadmap & Evolution**
+- [Roadmap & Evolution Overview](#-roadmap--evolution-overview)
+- [Evolution by Design](#-evolution-by-design)
 
-### 🚧 Roadmap & Evolution
-- [🚧 Roadmap & Evolution Overview](#-roadmap--evolution-overview)
-- [🌱 Evolution by Design](#-evolution-by-design)
-
-### 👤 Author & Contact
-- [🧬 Who Am I](#-who-am-i)
-- [🤝 Collaboration & Opportunities](#-collaboration--opportunities)
-- [🙏 Acknowledgments](#-acknowledgments)
-- [📄 License](#-license)
+**👤 Author & Contact**
+- [Who Am I](#-who-am-i)
+- [Collaboration & Opportunities](#-collaboration--opportunities)
+- [Acknowledgments](#-acknowledgments)
+- [License](#-license)
 
 
 
