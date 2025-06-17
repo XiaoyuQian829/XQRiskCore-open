@@ -44,39 +44,69 @@
 
 ## 🧭 System Origins & Design Philosophy
 
-**XQRiskCore routes responsibility — not just orders.**  
-Every trade — whether manual, strategy-triggered, or automated — flows through the same discipline:  
-**Intent → Risk Signals → Approval → Execution → Audit → Monitoring**
+**Most risk systems weren’t built for today’s rules.**  
+Permissions tangled. Logs missing. Controls patched on outdated cores.  
+When failures happen, it’s already too late.
 
-This isn’t post-trade logging — it’s **pre-trade enforcement**.  
-Where most systems start from execution and bolt on control, XQRiskCore was built the other way around — starting from discipline, and building upward.
+**XQRiskCore** responds to structural fatigue — not to predict alpha, but to enforce discipline **before** trades happen.
 
-We draw inspiration from institutional-grade systems, but reassemble them into a new order:
+> **Governance isn’t a wrapper. It’s the foundation.**
 
-- ✅ **BlackRock Aladdin** — Unified trade flow + RBAC-style audit  
-- ✅ **J.P. Morgan Vega** — Dual-path risk (pre- and post-trade)  
-- ✅ **Goldman Sachs Marquee** — Structured behavioral logging  
-- 🧪 **Beacon / Vega (planned)** — Hot-swappable rules, version-controlled policies  
-- 🧪 **Bridgewater / Two Sigma (planned)** — Adaptive risk scores, feedback loops
+---
 
-But XQRiskCore is not a clone.  
-It was independently built to prove a point:
+### 🔍 What Went Wrong — and What I Built to Fix It
 
-> **Governance is not a wrapper — it’s the foundation.**
+I studied 10 major failures — not for drama, but to see what broke:
 
-We hardcoded this structural priority into the system:
+| 💥 Failure Type         | Example(s)                  | What Went Wrong                                          | XQRiskCore Response                              |
+|------------------------|-----------------------------|----------------------------------------------------------|--------------------------------------------------|
+| 🔐 Role confusion       | Barings, SocGen, FTX         | No separation — same user could approve + execute       | `RBAC` enforces scoped roles                     |
+| 🧾 No audit trail       | Enron, Wirecard, Macquarie   | Logs missing, falsified, or unverifiable                | `AuditLogger`, `AuditViewer`, immutable `.jsonl` |
+| 🛑 No auto-block        | Macquarie, Lehman, MF Global | Signals existed — no structural trigger or lockdown     | `SilentTriggerEngine`, `KillSwitchManager`       |
+| 🧟 Legacy code risk     | Knight Capital               | Old logic reactivated, no sandbox or fallback           | `Intent → Approval → Execution` lifecycle        |
+| 📉 Model overtrust      | LTCM, FTX                    | Smart models, zero enforceable guardrails               | `RiskSignalSet`, override tracking               |
 
-| Layer                          | Priority   | Goal                          | Stability | Build First |
-|-------------------------------|------------|-------------------------------|-----------|-------------|
-| ✅ Compliance / Audit          | First      | Trust & Accountability        | ✅ High    | ✅ Yes       |
-| ✅ Risk Engine (Rules + Score) | Second     | Block risky behavior          | ⚠️ Medium  | ✅ Yes       |
-| 🧑‍💼 Execution / Strategy       | Third      | Trigger market actions        | ❌ Low     | ❌ No        |
+---
 
-This layered design is enforced throughout:
-- 🔐 Role-based access (RBAC)  
-- 🔍 Structured audit logging  
-- 🛡️ Multi-stage kill switches  
-- 🧠 Unified approval lifecycle  
+### 🧱 Built Bottom-Up — By Principle, Not Convention
+
+**Every trade follows the same lifecycle:**  
+`Intent → Signals → Approval → Execution → Audit → Monitoring`
+
+**Priority is hardcoded into the system:**
+
+| Layer                        | Priority | Goal                    | Stability | Build First |
+|-----------------------------|----------|-------------------------|-----------|-------------|
+| ✅ Compliance / Audit        | First    | Trust, accountability   | ✅ High    | ✅ Yes       |
+| ✅ Risk Engine (Rules + Score) | Second   | Block risky behavior     | ⚠️ Medium  | ✅ Yes       |
+| 🧑‍💼 Execution / Strategy     | Third    | Trigger actions          | ❌ Low     | ❌ No        |
+
+Enforced by:
+- 🔐 Role-based access (RBAC)
+- 🔍 Structured logging
+- 🛡️ Multi-stage kill switches
+- 🧠 Unified approval flow
+
+---
+
+### 📚 Institutional Inspirations
+
+**XQRiskCore** borrows lessons from world-class systems — but flips the build order.
+
+✅ Inspired & embedded in v1.0:
+- **BlackRock Aladdin** — Unified trade flow; scoped permissions; audit attribution  
+- **J.P. Morgan Vega / RaaS** — Pre- and post-trade enforcement  
+- **Goldman Sachs Marquee** — Structured logging and behavior traceability  
+
+🧪 Future targets:
+- **Beacon / Vega** — Rule hot-swapping, versioned policy control  
+- **Bridgewater / Two Sigma** — Adaptive scoring, live feedback loops  
+
+But unlike these systems, XQRiskCore wasn’t built inside a bank.  
+It was built from scratch — solo — to prove a principle:
+
+> You don’t need to be big to enforce discipline.  
+> You just need to build like you mean it.
 
 🎧 [Theme Track: The Core](https://youtu.be/OsUe84mkLhg)  
 **Structured. Watchful. Unyielding.**
