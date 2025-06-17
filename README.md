@@ -130,7 +130,7 @@ It was built from scratch — solo — to prove a principle:
 
 ## ✅ Core Capabilities
 
-## 1. 🔁 Unified Trade Flow — One Pipe for All Trades
+## 🔁 Unified Trade Flow — One Pipe for All Trades
 
 Unlike most systems that separate manual, strategy, and rebalance trades,  
 **XQRiskCore unifies them into a single pipeline** — one that enforces **the same approval logic**, **risk checks**, and **audit trace**.
@@ -158,7 +158,7 @@ Included:
 
 ---
 
-## 2. 🧠 Dual-Path Risk Control Architecture
+## 🧠 Dual-Path Risk Control Architecture
 
 > **Approve what deserves to go through.**  
 > **Monitor everything that actually did.**
@@ -293,7 +293,7 @@ Covers:
 
 ---
 
-## 3. 🧱 Role-Based Governance (RBAC)
+## 🧱 Role-Based Governance (RBAC)
 
 Every role in XQRiskCore is **scoped by permission**, **linked to identity**, and **logged for accountability**.
 
@@ -344,7 +344,7 @@ Covers:
 
 ---
 
-## 4. 🧾 Structured Behavioral Logging
+## 🧾 Structured Behavioral Logging
 
 XQRiskCore logs **every user and system action** as structured metadata — enabling traceability, compliance, and post-trade forensics.
 
