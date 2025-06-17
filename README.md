@@ -1,6 +1,6 @@
 # XQRiskCore
 
-> **A governance-grade risk control engine for trading** — with unified trade approval, structured audit logging, role-based access control, and multi-layer enforcement.
+> **An institutional-grade, governance-first risk control engine for trading** — with unified trade approval, structured audit logging, role-based access control, and multi-layer enforcement.
 
 > ⚠️ Tired of projects that ask you to install before you understand?  
 > XQRiskCore flips the script: **Try it first — then see how deep the governance goes.**
