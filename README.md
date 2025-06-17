@@ -27,12 +27,11 @@
 - [📚 Institutional Inspirations](#-institutional-inspirations)
 
 ### ✅ Core Capabilities
-- [Unified Trade Flow — One Pipe for All Trades](#️-unified-trade-flow--one-pipe-for-all-trades)
-- [Dual-Path Risk Control Architecture](#️-dual-path-risk-control-architecture)
-- [Role-Based Governance rbac](#️-role-based-governance-rbac)
-- [Structured Behavioral Logging](#️-structured-behavioral-logging)
-
-
+- [🔁 Unified Trade Flow — One Pipe for All Trades](#-unified-trade-flow--one-pipe-for-all-trades)
+- [🧠 Dual-Path Risk Control Architecture](#-dual-path-risk-control-architecture)
+- [🛡️ Role-Based Governance (RBAC)](#-role-based-governance-rbac)
+- [🧾 Structured Behavioral Logging](#-structured-behavioral-logging)
+- [🛡️ Emergency Guard Layer](#-emergency-guard-layer)
 
 ### 🧩 Architecture & Services
 - [🧩 System Architecture](#-system-architecture)
@@ -53,6 +52,7 @@
 - [🤝 Collaboration & Opportunities](#-collaboration--opportunities)
 - [🙏 Acknowledgments](#-acknowledgments)
 - [📄 License](#-license)
+
 
 
 ---
