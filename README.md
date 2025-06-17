@@ -130,7 +130,7 @@ It was built from scratch — solo — to prove a principle:
 
 ## ✅ Core Capabilities
 
-### 1. 🔁 Unified Trade Flow — One Pipe for All Trades
+## 1. 🔁 Unified Trade Flow — One Pipe for All Trades
 
 Unlike most systems that separate manual, strategy, and rebalance trades,  
 **XQRiskCore unifies them into a single pipeline** — one that enforces **the same approval logic**, **risk checks**, and **audit trace**.
@@ -140,7 +140,7 @@ Every source — whether it’s a button click, a strategy trigger, or a schedul
 
 → Intent → Risk Signal → Approval → Execution → Audit → Post-Trade Monitoring
 
-#### 📊 Figure 1: XQRiskCore Risk-Controlled Trade Lifecycle
+### 📊 Figure 1: XQRiskCore Risk-Controlled Trade Lifecycle
 ![Trade Flow](assets/xq_tradeflow.png)
 
 🧩 Want to understand how this unified trade pipeline actually works under the hood?
@@ -158,7 +158,7 @@ Included:
 
 ---
 
-### 2. 🧠 Dual-Path Risk Control Architecture
+## 2. 🧠 Dual-Path Risk Control Architecture
 
 > **Approve what deserves to go through.**  
 > **Monitor everything that actually did.**
@@ -171,11 +171,11 @@ XQRiskCore enforces risk through two layers:
 - **Pre-Trade Approval** — blocks high-risk trades before execution  
 - **Post-Trade Monitoring** — detects exposures and auto-locks after execution
 
-#### 1️⃣ Pre-Trade Approval
+### 1️⃣ Pre-Trade Approval
 
 Every trade — manual, strategy, or rebalance — passes a unified approval flow before execution. This is the core of XQRiskCore’s institutional-grade risk governance.
 
-##### 🔁 Approval Flow Diagram
+#### 🔁 Approval Flow Diagram
 
 ```text
           ┌──────────────────┐
@@ -236,7 +236,7 @@ Try it:
 
 ---
 
-#### 🧯 2️⃣ Post-Trade Monitoring — Risk Trigger System
+### 🧯 2️⃣ Post-Trade Monitoring — Risk Trigger System
 
 After execution, XQRiskCore continuously monitors positions using:
 
@@ -250,7 +250,7 @@ If any account- or asset-level threshold is breached, the system activates:
 
 ---
 
-##### 🧮 Account-Level Triggers
+#### 🧮 Account-Level Triggers
 
 | Condition                          | Metric           | Action             | Module                 |
 |-----------------------------------|------------------|---------------------|-------------------------|
@@ -263,7 +263,7 @@ If any account- or asset-level threshold is breached, the system activates:
 
 ---
 
-##### 📦 Asset-Level Triggers
+#### 📦 Asset-Level Triggers
 
 | Condition                        | Metric                 | Threshold | Lock    | Module(s)              |
 |----------------------------------|-------------------------|-----------|---------|-------------------------|
@@ -286,14 +286,14 @@ Covers:
 
 ---
 
-##### 🧠 Future Enhancements
+#### 🧠 Future Enhancements
 
 - **Black Swan KillSwitch** — e.g. S&P500 drops > 5% triggers lockdown  
 - **Slow Burn Lockdown** — 5 small losses without major drop triggers cooling phase
 
 ---
 
-### 3. 🧱 Role-Based Governance (RBAC)
+## 3. 🧱 Role-Based Governance (RBAC)
 
 Every role in XQRiskCore is **scoped by permission**, **linked to identity**, and **logged for accountability**.
 
@@ -308,7 +308,7 @@ Every role in XQRiskCore is **scoped by permission**, **linked to identity**, an
 | Compliance Oversight                   | `compliance_officer` | 🔧 Coming Soon |
 | Strategy Signal Execution              | `strategy_agent`   | 🔧 Coming Soon |
 
-#### 🔐 Governance Design Principles
+### 🔐 Governance Design Principles
 
 - **What you see** = info scope  
 - **What you can do** = last line of control  
@@ -319,7 +319,7 @@ All actions are **recorded and reviewable** — aligned with institutional-grade
 
 ---
 
-#### 🧑‍💼 Admin Console
+### 🧑‍💼 Admin Console
 
 - 👉 [Login as `admin`](https://xqriskcore-production.up.railway.app)  
   → `Admin → User & Role Manager` → Manage clients, assign roles, activate users.
@@ -344,11 +344,11 @@ Covers:
 
 ---
 
-#### 4. 🧾 Structured Behavioral Logging
+## 4. 🧾 Structured Behavioral Logging
 
 XQRiskCore logs **every user and system action** as structured metadata — enabling traceability, compliance, and post-trade forensics.
 
-##### 🧩 Action Types
+### 🧩 Action Types
 
 | Type     | Description                      | Example                                |
 |----------|----------------------------------|----------------------------------------|
@@ -356,7 +356,7 @@ XQRiskCore logs **every user and system action** as structured metadata — enab
 | `action` | User-initiated operations        | Submitted a trade                      |
 | `system` | Automated system behavior        | Triggered Silent Mode                  |
 
-##### 🗂️ File Format & Storage
+### 🗂️ File Format & Storage
 
 Logs are saved in newline-delimited JSON (`.jsonl`), partitioned by role, user, and date:
 
@@ -367,7 +367,7 @@ audit/user_action_logs/{role}/{user_id}/{YYYY-MM-DD}/events.jsonl
 
 Each file captures timestamped, structured records.
 
-##### 🔍 Admin Log Viewer
+### 🔍 Admin Log Viewer
 
 - 👉 [Login as `admin1`](https://xqriskcore-production.up.railway.app) → `Admin → User Action Logs`  
   → Filter by user or role to view actions: **viewed**, **submitted**, **overrode**, or **rejected** — all immutably stored.
@@ -375,7 +375,7 @@ Each file captures timestamped, structured records.
 ⬇️ UI Preview  
 <img width="1304" alt="User Action Log Viewer" src="assets/xq_user_logs.png" />
 
-##### 🧠 Why It Matters
+### 🧠 Why It Matters
 
 Risk officers don’t log for vanity — they log for **moments that matter**:
 
@@ -386,7 +386,7 @@ Risk officers don’t log for vanity — they log for **moments that matter**:
 
 Logs aren’t debugging tools — they’re **compliance weapons**.
 
-##### 📌 Logged Fields
+### 📌 Logged Fields
 
 Each action includes:
 
@@ -406,13 +406,13 @@ These feed:
 
 ---
 
-### 🛡️ Emergency Guard Layer
+## 🛡️ Emergency Guard Layer
 
 XQRiskCore’s final line of defense — enforcing **stability**, **audit integrity**, and **strategy discipline**, even under failure or attack.
 
 It’s designed to **fail safe**, not fail silently.
 
-#### ✅ Active Safeguards
+### ✅ Active Safeguards
 
 | Module                | Function                                                        | Status    |
 |-----------------------|------------------------------------------------------------------|-----------|
