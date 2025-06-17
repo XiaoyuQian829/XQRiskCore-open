@@ -449,7 +449,7 @@ Covers:
 
 ---
 
-### 🧩 System Architecture
+## 🧩 System Architecture
 
 XQRiskCore follows a four-layer architecture:
 
@@ -462,7 +462,7 @@ XQRiskCore follows a four-layer architecture:
 
 ---
 
-#### 🧠 Core Context Containers
+### 🧠 Core Context Containers
 
 | Context         | Scope                      | Role                                  | Created When                  | Represents                        |
 |-----------------|----------------------------|----------------------------------------|--------------------------------|------------------------------------|
@@ -472,7 +472,7 @@ XQRiskCore follows a four-layer architecture:
 
 ---
 
-#### 🔄  Core Architecture Overview
+### 🔄  Core Architecture Overview
 
 
                  ┌────────────────────────────┐
@@ -509,11 +509,11 @@ XQRiskCore follows a four-layer architecture:
 
 ---
 
-### 🧩 Service Interface Abstraction
+## 🧩 Service Interface Abstraction
 
 To demonstrate modular engineering capability and support SDK-like integration, core services in **XQRiskCore** have been refactored into interface classes. These interfaces decouple logic from orchestration, enabling independent testing, service injection, and future API exposure.
 
-#### ✅ Implemented Service Interfaces
+### ✅ Implemented Service Interfaces
 
 | Interface Class            | Role Description                                  |
 |----------------------------|----------------------------------------------------|
@@ -565,27 +565,49 @@ Controls span all three major financial risk classes:
 
 ---
 
-## 📌 Use Cases
+## 📌 Use Cases — Built to Prevent What Actually Happens
 
-XQRiskCore solves a simple but critical problem:  
-🧠 *How do we ensure every trade — regardless of origin — is reviewed, executed, and recorded under a defensible system?*
+**XQRiskCore wasn’t built for hypotheticals.**  
+It responds directly to the *structural causes* behind real-world trading failures:
 
-It answers governance-level questions most systems avoid:
+| 💥 Failure | 🛠️ XQRiskCore Response |
+|-----------|-------------------------|
+| **Macquarie, MF Global**  
+Risk signals existed, but no one acted | `SilentTriggerEngine` auto-scans logs daily and enforces **lockdowns without human input**
+| **Enron, Wirecard**  
+Logs were missing or forged | `AuditLogger` creates immutable `.jsonl` logs; `AuditViewer` exposes full approval & override history
+| **Barings, FTX**  
+Same user could approve + trade | `RBAC` enforces strict role separation — submit, approve, execute are scoped and auditable
+| **Knight Capital**  
+Legacy code reactivated in production | Every trade flows through `Intent → Approval → Execution` — sandboxable, lifecycle-controlled
+| **LTCM, Archegos, FTX**  
+Smart models, no structural brakes | `RiskSignalSet` computes VaR, CVaR, regime scores — and structurally blocks when thresholds hit
+| **Lehman**  
+Run-up to collapse wasn’t interrupted | `KillSwitchManager` monitors exposures post-trade and **auto-locks accounts** on violation
+| **SocGen**  
+Rogue trader bypassed approvals | `TradeIntent` required for every action; approvals scoped via `RBAC`, no raw trade injection allowed
+| **Credit Suisse (Archegos)**  
+No per-asset risk monitoring | `AssetPosition` and per-asset scoring catch concentrated exposures early
+| **FTX (again)**  
+No override tracking | Every override is logged: `who`, `when`, `why` — traceable in `AuditViewer`
+| **Wirecard (again)**  
+Auditors couldn’t reconstruct timeline | `TradeLifecycleState` captures full history: intent → approval → execution → outcome
 
-- **Who approves — and under what logic?**  
-- **Can biased decisions be structurally blocked?**  
-- **Are risk outcomes traceable by design?**  
-- **Can strategy failures be traced to their source?**
+> These aren’t edge cases.  
+> They’re the **default failure modes** of systems without structural governance.
 
-Built for:
+---
 
-- ✅ **Multi-strategy fund desks** needing unified, explainable risk control  
-- ✅ **Asset managers** seeking auditable governance without enterprise overhead  
-- ✅ **Quant teams** requiring lifecycle tracking and approval scoring  
-- ✅ **Compliance-focused firms** needing logs, overrides, and policy enforcement  
-- ✅ **Risk officers and auditors** demanding traceable decision chains
+### ✅ Built for Teams That Need Answers
 
-Because risk isn’t just about limits — it’s about **structure, traceability, and responsibility**.
+- **Multi-strategy desks** — unify discretionary and algorithmic trades under a single approval flow  
+- **Risk managers** — monitor every asset, account, and override in real time  
+- **Auditors** — export full decision chains with timestamps, reasons, and actor IDs  
+- **Quant teams** — test approval scores and failure modes before live deployment  
+- **Fund leaders** — enforce policy **before** things break — not just observe after
+
+Because after the fact is too late.  
+**XQRiskCore governs before, monitors after, and logs everything.**
 
 ---
 
