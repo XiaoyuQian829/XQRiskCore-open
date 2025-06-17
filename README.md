@@ -18,22 +18,6 @@
 
 ---
 
-## ⚙️ Built to Govern, Not Just Execute
-
-**XQRiskCore** enforces policy before trades happen — not after they go wrong.
-
-Every trade is routed through a structured lifecycle:
-- ⛓️ From submission to approval  
-- 🧾 From scoring to audit logging  
-- 🛡️ From detection to multi-layer safeguards
-
-Whether triggered by a trader, a strategy, or a rebalance engine —  
-**every action is accountable, every override is recorded, and every permission is scoped.**
-
-> **This is not order routing. It’s responsibility routing.**
-
----
-
 ## 📑 Table of Contents
 
 - [🧭 System Origins & Design Philosophy](#-system-origins--design-philosophy)
@@ -60,25 +44,29 @@ Whether triggered by a trader, a strategy, or a rebalance engine —
 
 ## 🧭 System Origins & Design Philosophy
 
-**XQRiskCore wasn’t built to imitate trading tools — it was architected to enforce institutional-grade governance.**
+**XQRiskCore routes responsibility — not just orders.**  
+Every trade — whether manual, strategy-triggered, or automated — flows through the same discipline:  
+**Intent → Risk Signals → Approval → Execution → Audit → Monitoring**
 
-Its design foundations are:
+This isn’t post-trade logging — it’s **pre-trade enforcement**.
 
-- To **embed compliance** directly into the trading process  
-- To **log structured decisions**, not just outcomes  
-- To **restrict permissions** based on role and scope  
-- To **monitor risk continuously**, not retroactively
+We built the system **bottom-up**, with strict structural priority:
 
-What sets XQRiskCore apart is clarity: every decision is traceable, every rule is testable, and every action is governed by policy.
+| Layer                        | Priority   | Goal                          | Stability | Build First |
+|-----------------------------|------------|-------------------------------|-----------|-------------|
+| ✅ Compliance / Audit        | First      | Trust & Accountability        | ✅ High    | ✅ Yes       |
+| ✅ Risk Engine (Rules + Score) | Second     | Block risky behavior          | ⚠️ Medium  | ✅ Yes       |
+| 🧑‍💼 Execution / Strategy     | Third      | Trigger market actions        | ❌ Low     | ❌ No        |
 
----
+> **Governance is not a wrapper — it’s the foundation.**
 
-🎧 **Want to hear what a system of discipline sounds like?**  
-Listen to the official theme track — composed by AI, inspired by structure:
+This layered logic is enforced across:
+- 🔐 Role-based access (RBAC)  
+- 🔍 Structured audit logging  
+- 🛡️ Multi-stage kill switches  
+- 🧠 Unified approval lifecycle
 
-> 🔊 [Watch: The Core — Theme of XQRiskCore](https://youtu.be/OsUe84mkLhg)
-
-Let the music carry the logic.  
+🎧 [Theme Track: The Core](https://youtu.be/OsUe84mkLhg)  
 **Structured. Watchful. Unyielding.**
 
 ---
