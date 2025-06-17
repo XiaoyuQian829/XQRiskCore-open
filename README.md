@@ -120,8 +120,6 @@ XQRiskCore enforces risk through two layers:
 - **Pre-Trade Approval** — blocks high-risk trades before execution  
 - **Post-Trade Monitoring** — detects exposures and auto-locks after execution
 
----
-
 #### 1️⃣ Pre-Trade Approval
 
 Every trade — manual, strategy, or rebalance — passes a unified approval flow before execution. This is the core of XQRiskCore’s institutional-grade risk governance.
