@@ -20,45 +20,37 @@
 
 ## 📑 Table of Contents
 
-## 1. 🧭 System Origins & Design Philosophy
-- [System Origins & Design Philosophy](#1-🧭-system-origins--design-philosophy)
+### 🧭 System Foundations
+- [🧭 System Origins & Design Philosophy](#🧭-system-origins--design-philosophy)
+- [🔍 What Went Wrong — and What I Built to Fix It](#🔍-what-went-wrong--and-what-i-built-to-fix-it)
+- [🧱 Built Bottom-Up — By Principle, Not Convention](#🧱-built-bottom-up--by-principle-not-convention)
 
-## 2. 📚 Institutional Inspirations
-- [Institutional Inspirations](#2-📚-institutional-inspirations)
+### 📚 Inspirations & Architecture
+- [📚 Institutional Inspirations](#📚-institutional-inspirations)
+- [🧩 System Architecture](#🧩-system-architecture)
+- [🧠 Core Context Containers](#🧠-core-context-containers)
+- [🧩 Service Interface Abstraction](#🧩-service-interface-abstraction)
 
-## 3. ✅ Core Capabilities
-- [Unified Trade Flow — One Pipe for All Trades](#3-✅-core-capabilities)
-- [Dual-Path Risk Control Architecture](#3-✅-core-capabilities)
-  - [Pre-Trade Approval](#3-✅-core-capabilities)
-  - [Post-Trade Monitoring — Risk Trigger System](#3-✅-core-capabilities)
-  - [Role-Based Governance (RBAC)](#3-✅-core-capabilities)
-  - [Structured Behavioral Logging](#3-✅-core-capabilities)
-  - [Emergency Guard Layer](#3-✅-core-capabilities)
+### ✅ Core Capabilities
+- [🔁 1. Unified Trade Flow — One Pipe for All Trades](#1-🔁-unified-trade-flow--one-pipe-for-all-trades)
+- [🧠 2. Dual-Path Risk Control Architecture](#2-🧠-dual-path-risk-control-architecture)
+- [🧱 3. Role-Based Governance (RBAC)](#3-🧱-role-based-governance-rbac)
+- [🧾 4. Structured Behavioral Logging](#4-🧾-structured-behavioral-logging)
+- [🛡️ 5. Emergency Guard Layer](#🛡️-emergency-guard-layer)
 
-## 4. 🧩 System Architecture
-- [System Architecture](#4-🧩-system-architecture)
+### 🧮 Functional & Risk Coverage
+- [🧮 Functional Overview](#🧮-functional-overview)
+- [📌 Use Cases — Built to Prevent What Actually Happens](#📌-use-cases--built-to-prevent-what-actually-happens)
 
+### 🚧 Roadmap & Evolution
+- [🚧 Roadmap & Evolution Overview](#🚧-roadmap--evolution-overview)
+- [🌱 Evolution by Design](#🌱-evolution-by-design)
 
-## 5. 🧮 Functional Overview
-- [Functional Overview](#5-🧮-functional-overview)
-
-
-## 6. 📌 Use Cases — Built to Prevent What Actually Happens
-- [Governance Risk — When Roles Blur, Discipline Fails](#6-📌-use-cases--built-to-prevent-what-actually-happens)
-- [Operational Risk — When Systems Drift, Failures Multiply](#6-📌-use-cases--built-to-prevent-what-actually-happens)
-- [Market Risk — When Signals Exist, But No One Acts](#6-📌-use-cases--built-to-prevent-what-actually-happens)
-
-## 7. 🚧 Roadmap & Evolution Overview
-- [Roadmap & Evolution Overview](#7-🚧-roadmap--evolution-overview)
-- [Evolution by Design](#7-🚧-roadmap--evolution-overview)
-
-## 8. 🧬 Who Am I?
-- [Who Am I?](#8-🧬-who-am-i)
-- [Collaboration & Opportunities](#9-🤝-collaboration--opportunities)
-- [Acknowledgments](#10-🙏-acknowledgments)
-- [License](#11-📄-license)
-
-
+### 👤 Author & Contact
+- [🧬 Who Am I](#🧬-who-am-i)
+- [🤝 Collaboration & Opportunities](#🤝-collaboration--opportunities)
+- [🙏 Acknowledgments](#🙏-acknowledgments)
+- [📄 License](#📄-license)
 
 
 ---
