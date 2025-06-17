@@ -21,36 +21,37 @@
 ## 📑 Table of Contents
 
 ### 🧭 System Foundations
-- [🧭 System Origins & Design Philosophy](#🧭-system-origins--design-philosophy)
-- [🔍 What Went Wrong — and What I Built to Fix It](#🔍-what-went-wrong--and-what-i-built-to-fix-it)
-- [🧱 Built Bottom-Up — By Principle, Not Convention](#🧱-built-bottom-up--by-principle-not-convention)
+- [🧭 System Origins & Design Philosophy](#-system-origins--design-philosophy)
 
 ### 📚 Inspirations & Architecture
-- [📚 Institutional Inspirations](#📚-institutional-inspirations)
-- [🧩 System Architecture](#🧩-system-architecture)
-- [🧠 Core Context Containers](#🧠-core-context-containers)
-- [🧩 Service Interface Abstraction](#🧩-service-interface-abstraction)
+- [📚 Institutional Inspirations](#-institutional-inspirations)
 
 ### ✅ Core Capabilities
-- [🔁 1. Unified Trade Flow — One Pipe for All Trades](#1-🔁-unified-trade-flow--one-pipe-for-all-trades)
-- [🧠 2. Dual-Path Risk Control Architecture](#2-🧠-dual-path-risk-control-architecture)
-- [🧱 3. Role-Based Governance (RBAC)](#3-🧱-role-based-governance-rbac)
-- [🧾 4. Structured Behavioral Logging](#4-🧾-structured-behavioral-logging)
-- [🛡️ 5. Emergency Guard Layer](#🛡️-emergency-guard-layer)
+- [1. 🔁 Unified Trade Flow — One Pipe for All Trades](#1-️-unified-trade-flow--one-pipe-for-all-trades)
+- [2. 🧠 Dual-Path Risk Control Architecture](#2-️-dual-path-risk-control-architecture)
+- [3. 🧱 Role-Based Governance (RBAC)](#3-️-role-based-governance-rbac)
+- [4. 🧾 Structured Behavioral Logging](#4-️-structured-behavioral-logging)
+- [🛡️ Emergency Guard Layer](#️-emergency-guard-layer)
 
-### 🧮 Functional & Risk Coverage
-- [🧮 Functional Overview](#🧮-functional-overview)
-- [📌 Use Cases — Built to Prevent What Actually Happens](#📌-use-cases--built-to-prevent-what-actually-happens)
+### 🧩 Architecture & Services
+- [🧩 System Architecture](#-system-architecture)
+- [🧩 Service Interface Abstraction](#-service-interface-abstraction)
+
+### 🧮 Functional Coverage
+- [🧮 Functional Overview](#-functional-overview)
+
+### 📌 Use Cases
+- [📌 Use Cases — Built to Prevent What Actually Happens](#-use-cases--built-to-prevent-what-actually-happens)
 
 ### 🚧 Roadmap & Evolution
-- [🚧 Roadmap & Evolution Overview](#🚧-roadmap--evolution-overview)
-- [🌱 Evolution by Design](#🌱-evolution-by-design)
+- [🚧 Roadmap & Evolution Overview](#-roadmap--evolution-overview)
+- [🌱 Evolution by Design](#-evolution-by-design)
 
 ### 👤 Author & Contact
-- [🧬 Who Am I](#🧬-who-am-i)
-- [🤝 Collaboration & Opportunities](#🤝-collaboration--opportunities)
-- [🙏 Acknowledgments](#🙏-acknowledgments)
-- [📄 License](#📄-license)
+- [🧬 Who Am I](#-who-am-i)
+- [🤝 Collaboration & Opportunities](#-collaboration--opportunities)
+- [🙏 Acknowledgments](#-acknowledgments)
+- [📄 License](#-license)
 
 
 ---
