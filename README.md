@@ -1,3 +1,14 @@
+> ⚠️ **Official Repository Notice**  
+> This is the **official repository** of **XQRiskCore**, developed and maintained by **Xiaoyu Qian**.  
+> Any other versions claiming higher releases (e.g., "v3.0") or reusing the name and structure **without authorization** may be misleading.  
+>  
+> 🔒 Key modules (`core/`, `risk_engine/`, `scheduler/`, `services/`) are **excluded from public license**.  
+> Only this repository contains the authentic and executable system.  
+>  
+> ✅ Please refer to this repo for the original source, updates, and full context:  
+> [https://github.com/XiaoyuQian829/XQRiskCore-open](https://github.com/XiaoyuQian829/XQRiskCore-open)
+
+
 # XQRiskCore: A Governance-Grade Risk Control Engine for Trading
 
 > **A governance-first risk control engine for trading** — with unified trade approval, structured audit logging, role-based access control, and multi-layer enforcement.
