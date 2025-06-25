@@ -1,4 +1,4 @@
-# XQRiskCore
+# XQRiskCore: A Governance-Grade Risk Control Engine for Trading
 
 > **A governance-first risk control engine for trading** — with unified trade approval, structured audit logging, role-based access control, and multi-layer enforcement.
 
