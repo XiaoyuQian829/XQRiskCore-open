@@ -1,7 +1,3 @@
-> ⚠️ **This is the ONLY official repo of XQRiskCore** — other versions (e.g. "v3.0") are unauthorized and may violate license terms.  
-> Key modules (`core/`, `risk_engine/`, etc.) are NOT open source.  
-> 🔗 Official source: [github.com/XiaoyuQian829/XQRiskCore-open](https://github.com/XiaoyuQian829/XQRiskCore-open)
-
 # XQRiskCore: A Governance-Grade Risk Control Engine for Trading
 
 > **A governance-first risk control engine for trading** — with unified trade approval, structured audit logging, role-based access control, and multi-layer enforcement.
