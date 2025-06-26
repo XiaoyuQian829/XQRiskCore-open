@@ -9,7 +9,7 @@
 
 ---
 
-🚀 Jump in as an **admin**, **trader**, or **auditor** — no setup required.  
+🚀 Jump in as an **admin**, **trader**, **risker** or **auditor** — no setup required.  
 🎯 **Live Demo** → [www.xqriskcore.com](https://xqriskcore-production.up.railway.app/)
 
 <p align="center">
