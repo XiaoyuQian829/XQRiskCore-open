@@ -10,7 +10,7 @@
 ---
 
 🚀 Jump in as an **admin**, **trader**, **risker** or **auditor** — no setup required.  
-🎯 **Live Demo** → [www.xqriskcore.com](https://xqriskcore-production.up.railway.app/)
+🎯 **Live Demo** → [https://xqriskcore-production.up.railway.app/](https://xqriskcore-production.up.railway.app/)
 
 <p align="center">
   <img src="assets/xq_login.png" width="600" />
