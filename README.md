@@ -1,10 +1,11 @@
 # XQRiskCore: A Governance-Grade Risk Control Engine for Trading
 
-> **Built to Govern, Not Just Execute**  
+> **Built to Govern — Not Just Execute**  
 > Unified trade approval. Structured audit logging. Role-based access. Multi-layer enforcement.
 
 > ⚠️ Talk is cheap. Try the governance.  
-> XQRiskCore flips the script — no install, no promises. Just structure.
+> No install. No guessing. No hiding.  
+> If it doesn't run — it's not XQRiskCore.
 
 ---
 
@@ -16,6 +17,7 @@
 </p>
 
 ---
+
 
 ## 📑 Table of Contents
 
