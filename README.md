@@ -639,12 +639,6 @@ Every module is built for upgrades — not hard rewrites.
 
 ## 🤝 Collaboration & Opportunities
 
-I'm open to:
-
-- ✅ Partnering with funds, quant teams, or compliance leads building auditable risk infrastructure  
-- ✅ Projects involving governance-driven strategy execution or automated trade control  
-- ✅ Roles in **quant/risk engineering**, **approval architecture**, or **institutional risk governance**
-
 If you're building something serious — or looking for someone who does — feel free to reach out:
 
 - 📧 [x.qian@uq.edu.au](mailto:x.qian@uq.edu.au)  
