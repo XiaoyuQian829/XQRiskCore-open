@@ -641,8 +641,7 @@ Every module is built for upgrades — not hard rewrites.
 
 If you're building something serious — or looking for someone who does — feel free to reach out:
 
-- 📧 [x.qian@uq.edu.au](mailto:x.qian@uq.edu.au)  
-- 📧 [qianxiaoyu19@gmail.com](mailto:qianxiaoyu19@gmail.com)  
+- 📧 [x.qian@uq.edu.au](mailto:x.qian@uq.edu.au)   
 - 🔗 [LinkedIn](https://www.linkedin.com/in/xiaoyu-qian-003882212)
 
 ---
