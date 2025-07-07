@@ -637,18 +637,6 @@ Every module is built for upgrades — not hard rewrites.
 
 ---
 
-## 🧬 Who Am I?
-
-I’m a graduating PhD in statistical genetics, where I specialized in modeling complex systems and risk behavior.  
-**XQ** is my name.
-
-While preparing for the **FRM Part 1** exam, I set myself a challenge:  
-To use my skills in statistics and programming — not just to study financial risk, but to **build** it.
-
-The result is **XQRiskCore** — my first project in financial risk.  
-
----
-
 ## 🤝 Collaboration & Opportunities
 
 I'm open to:
@@ -662,22 +650,6 @@ If you're building something serious — or looking for someone who does — fee
 - 📧 [x.qian@uq.edu.au](mailto:x.qian@uq.edu.au)  
 - 📧 [qianxiaoyu19@gmail.com](mailto:qianxiaoyu19@gmail.com)  
 - 🔗 [LinkedIn](https://www.linkedin.com/in/xiaoyu-qian-003882212)
-
----
-
-## 🙏 Acknowledgments
-
-I built XQRiskCore with help from large language models — not just as tools, but as thinking partners.  
-**ChatGPT** helped architect logic, **DeepSeek** visualized workflows, and **Gemini** challenged the structure.
-
-I’m deeply grateful to my PhD advisors, **Associate Professor Allan McRae** and **Dr. Fleur Garton**, whose modeling discipline shaped much of the system’s architecture.
-
-Two ideas guided this project from the ground up:
-
-- **Charlie Munger’s latticework thinking**, which taught me to cross-pollinate abstractions from genetics to finance.  
-- **Warren Buffett’s lesson from LTCM** — that “you can’t survive a margin call even if you’re right” — which defined my priority: discipline over brilliance.
-
-Without those principles, this system would not exist — at least not in this form.
 
 ---
 
